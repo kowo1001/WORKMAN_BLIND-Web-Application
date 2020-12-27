@@ -11,14 +11,17 @@ import workman.model.util.PublicCommon;
 
 public class CompanyDAO {
 	
-	public static void addCompany(String companyname, String companystory, String companyloc, String companynum) throws SQLException {
+	public static void addCompany(String companyname, String companystory, String companyloc, 
+			String companynum) throws SQLException {
 
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 
 		try {
-			Company company = Company.builder().companyname(companyname).companystory(companystory).companyloc(companyloc).companynum(companynum).build();
+			Company company = Company.builder().companyname(companyname).companystory(companystory).
+					companyloc(companyloc).companynum(companynum).build();
+			
 			em.persist(company);
 			tx.commit();
 
@@ -43,6 +46,7 @@ public class CompanyDAO {
 		try {
 			
 			Company company = em.find(Company.class, companyname);
+			
 			company.setCompanynum(companynum);
 			tx.commit();
 
@@ -68,6 +72,7 @@ public class CompanyDAO {
 		try {
 			
 			Company company = em.find(Company.class, companyname);
+			
 			company.setCompanyloc(companyloc);
 			tx.commit();
 
@@ -92,6 +97,7 @@ public class CompanyDAO {
 	try {
 			
 			Company company = em.find(Company.class, companyname);
+			
 			em.remove(company);
 			tx.commit();
 
@@ -116,6 +122,7 @@ public class CompanyDAO {
 		Company company = null;
 		try {
 			company = em.find(Company.class, companyname);
+			
 			tx.commit();
 
 		} catch (Exception e) {

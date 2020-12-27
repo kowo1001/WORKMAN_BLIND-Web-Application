@@ -43,10 +43,10 @@ public class Member {
 	private String user_email;
 	
 	@OneToMany(mappedBy = "userid")
-	private List<Parttimeeval> parttimeeval;
+	private List<ParttimeEval> parttimeevals;
 	
 	@OneToMany(mappedBy = "userid")
-	private List<Parttimelist> parttimelists;
+	private List<ParttimeList> parttimelists;
 	
 
 

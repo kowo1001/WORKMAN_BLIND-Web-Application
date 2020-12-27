@@ -43,7 +43,7 @@ import lombok.Setter;
 
 
 @Entity
-public class Parttimeeval {
+public class ParttimeEval {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "parteval_seq_gen")
@@ -52,7 +52,7 @@ public class Parttimeeval {
 	
 	@ManyToOne
 	@Column(name = "text_list")
-	private Parttimelist textlist;
+	private ParttimeList textlist;
 	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
