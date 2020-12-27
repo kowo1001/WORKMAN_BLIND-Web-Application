@@ -8,27 +8,27 @@ DROP TABLE parttimelist cascade constraint;
 DROP TABLE parttimeeval cascade constraint;
 
 -- ±â¾÷
-DROP TABLE enterprise cascade constraint;
+DROP TABLE company cascade constraint;
 
 DROP SEQUENCE texteval_seq;
 
 
 CREATE TABLE member (
-       userid             VARCHAR2(20)  PRIMARY KEY,
-       password                  VARCHAR2(20) NOT NULL,
+       userid              VARCHAR2(20)  PRIMARY KEY,
+       password            VARCHAR2(20) NOT NULL,
        username            VARCHAR2(20) NOT NULL,
-       useremail                   VARCHAR2(50) NOT NULL
+       useremail           VARCHAR2(50) NOT NULL
 );
 
 CREATE TABLE parttimelist (
-       textlist              number(10) PRIMARY KEY,
+       textlist             NUMBER(10) PRIMARY KEY,
        userid               VARCHAR2(20) NOT NULL,
        enname               VARCHAR2(40) NOT NULL,
        reviewnum   			NUMBER(10) NOT NULL,
        reviewscore          NUMBER(10,1) NOT NULL,
        recruitstatus        VARCHAR2(40) NOT NULL,
-       date   VARCHAR2(50) NOT NULL,
-       empperiod   VARCHAR2(40) NOT NULL
+       date   				VARCHAR2(50) NOT NULL,
+       empperiod   			VARCHAR2(40) NOT NULL
 );
 
 
@@ -44,8 +44,14 @@ CREATE TABLE parttimeeval (
        experience   VARCHAR2(50) NOT NULL
 );
 
-CREATE SEQUENCE texteval_seq;
+CREATE TABLE company (
+	company_name	varchar2(20)	NOT NULL,
+	company_story	CLOB	NULL,
+	company_loc	varchar2(40)	NULL,
+	company_num	varchar2(20)	NULL
+);
 
+CREATE SEQUENCE texteval_seq;
 
 ALTER TABLE probono_project  ADD FOREIGN KEY (receive_id) REFERENCES recipient  (recipient_id);
 ALTER TABLE probono_project ADD FOREIGN KEY (activist_id)  REFERENCES activist  (activist_id);
