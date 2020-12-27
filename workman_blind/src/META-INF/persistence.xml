@@ -3,8 +3,9 @@
 	<persistence-unit name="workman_blind">
 	<class>workman.model.dto.Company</class>
 	<class>workman.model.dto.Member</class>
-	<class>workman.model.dto.Parttimeeval</class>
-	<class>workman.model.dto.Parttimelist</class>
+	<class>workman.model.dto.ParttimeEval</class>
+	<class>workman.model.dto.ParttimeList</class>
+
 	
 	<properties>
          <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />

@@ -48,6 +48,4 @@ public class Member {
 	@OneToMany(mappedBy = "userid")
 	private List<ParttimeList> parttimelists;
 	
-
-
 }

@@ -39,7 +39,7 @@ public class ParttimeList {
 	@ManyToOne
 	@JoinColumn(name="user_id")
 	private Member userid;
-	
+
 	@ManyToOne
 	@JoinColumn(name="company_name")
 	private Company companyname;
