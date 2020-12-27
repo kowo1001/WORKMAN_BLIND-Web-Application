@@ -34,7 +34,7 @@ public class ParttimeList {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "partlist_seq_gen")
 	@Column(name="text_list")
-	private Long textlist;
+	private long textlist;
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
