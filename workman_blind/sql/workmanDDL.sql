@@ -10,49 +10,46 @@ DROP TABLE parttimeeval cascade constraint;
 -- ±â¾÷
 DROP TABLE company cascade constraint;
 
-DROP SEQUENCE texteval_seq;
-
 
 CREATE TABLE member (
-       userid              VARCHAR2(20)  PRIMARY KEY,
-       password            VARCHAR2(20) NOT NULL,
-       username            VARCHAR2(20) NOT NULL,
-       useremail           VARCHAR2(50) NOT NULL
+       user_id              VARCHAR2(20)  PRIMARY KEY,
+       user_pw            VARCHAR2(20) NOT NULL,
+       user_name            VARCHAR2(20) NOT NULL,
+       user_email           VARCHAR2(50) NOT NULL
 );
 
 CREATE TABLE parttimelist (
-       textlist             NUMBER(10) PRIMARY KEY,
-       userid               VARCHAR2(20) NOT NULL,
-       enname               VARCHAR2(40) NOT NULL,
-       reviewnum   			NUMBER(10) NOT NULL,
-       reviewscore          NUMBER(10,1) NOT NULL,
-       recruitstatus        VARCHAR2(40) NOT NULL,
+       text_list             NUMBER(10) PRIMARY KEY,
+       user_id               VARCHAR2(20) NOT NULL,
+       company_name               VARCHAR2(40) NOT NULL,
+       review_num   			NUMBER(10) NOT NULL,
+       review_score          NUMBER(10,1) NOT NULL,
+       recruit_status        VARCHAR2(40) NOT NULL,
        date   				VARCHAR2(50) NOT NULL,
-       empperiod   			VARCHAR2(40) NOT NULL
+       emp_period   			VARCHAR2(40) NOT NULL
 );
 
 
 CREATE TABLE parttimeeval (
-	   texteval             NUMBER(10) PRIMARY KEY,
-       textlist             VARCHAR2(50),
-       userid      VARCHAR2(20) NOT NULL,
-       proscons     VARCHAR2(20) NOT NULL,
-       salary   			VARCHAR2(20) NOT NULL,
+	   text_eval             NUMBER(10) PRIMARY KEY,
+       text_list             VARCHAR2(50),
+       user_id      VARCHAR2(20) NOT NULL,
+       pros_cons     VARCHAR2(20) NOT NULL,
+       hourly_wage   			Number(10) NOT NULL,
        environment          VARCHAR2(20) NOT NULL,
        incline        VARCHAR2(20) NOT NULL,
-       workdif   VARCHAR2(20) NOT NULL,
+       work_dif   VARCHAR2(20) NOT NULL,
        experience   VARCHAR2(50) NOT NULL
 );
 
 CREATE TABLE company (
 	company_name	varchar2(20)	NOT NULL,
-	company_story	CLOB	NULL,
-	company_loc	varchar2(40)	NULL,
-	company_num	varchar2(20)	NULL
+	company_story	CLOB	NOT NULL,
+	company_loc	varchar2(40)	NOT NULL,
+	company_num	varchar2(20)	NOT NULL
 );
 
-CREATE SEQUENCE texteval_seq;
 
-ALTER TABLE probono_project  ADD FOREIGN KEY (receive_id) REFERENCES recipient  (recipient_id);
-ALTER TABLE probono_project ADD FOREIGN KEY (activist_id)  REFERENCES activist  (activist_id);
-ALTER TABLE probono_project ADD FOREIGN KEY (probono_id) REFERENCES probono  (probono_id);
+ALTER TABLE member  ADD FOREIGN KEY (company_name) REFERENCES company  (company_name);
+ALTER TABLE parttimelist ADD FOREIGN KEY (user_id)  REFERENCES member  (user_id);
+ALTER TABLE parttimeeval ADD FOREIGN KEY (text_list) REFERENCES parttimelist  (text_list);
