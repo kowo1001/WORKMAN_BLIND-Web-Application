@@ -1,21 +1,20 @@
- -- activist insert[재능 기부자 저장]
-insert into activist values('giver1', '나의사', 'gp1', 'dermatology');
-insert into activist values('giver2', '오드리', 'gp2', 'culture');
-insert into activist values('giver3', '키다리', 'gp3', 'mentor');
+-- parttimelist 테이블 알바리스트 저장
+insert into parttimelist values(208252,'한솥도시락(부산대북문점)',1,8,'채용중','2시간전','단기')
+insert into parttimelist values(208253,'GS25대구역자이점 ',1,9,'채용마감','3시간전','장기')
+insert into parttimelist values(208254,'이마트 천안서북점 이니스프리',2,3,'채용중','3시간전','시간제')
 
--- recipient insert[재능 수혜자 저장]
-insert into recipient values('receivePeople1', '나아토피', 'rp1', '아토피 치료');
-insert into recipient values('receivePeople2', '나문화', 'rp2', '감성 치료');
-insert into recipient values('receivePeople3', '나멘토', 'rp3', '심리 상담');
+-- parttimeeval 테이블 알바평가게시글 저장
+insert into parttimeeval values(208252,'kwon0329','칼퇴가능','안밀려요','식사 제공','깐깐해요','손님이 많아요','경험1')
+insert into parttimeeval values(208252,'kwon0330','근로계약서 작성','많이 줘요','화장실 깨끗','친절해요','일 많아요','경험')
+insert into parttimeeval values(208253,'moon77','계속 서있어야함','최저도 안줘요','교통 편리','화가 많아요','힘쓰는일 많아요','경험')
 
--- probono insert[재능기부 정보 저장]
-insert into probono values('schweitzer', '슈바이처 프로젝트', '의사, 한의사, 수의사등의 의료 활동 및 후원 등 의료, 보건, 건강과 관련된 분야');
-insert into probono values('audreyHepbun', '오드리햅번 프로젝트', '예술가, 문화관련 프로그램 제공, 전시ㆍ관람 등 기회제공, 미용,환경 캠페인 등 문화ㆍ예술관련 분야');
-insert into probono values('daddyLongLegs', '키다리아저씨 프로젝트', '결연, 상담, 멘토, 독서ㆍ학습지도 및 교육기회 제공, 장학지원, 심리상담 등 멘토링, 상담, 교육, 결연분야');
-
--- probono_project insert[재능 기부 프로젝트 저장]
-insert into probono_project values(probono_project_id_seq.nextval, '슈바이처 프로젝트', 'schweitzer', 'giver1', 'receivePeople1', '아토피 무상 치료');
-insert into probono_project values(probono_project_id_seq.nextval, '오드리햅번 프로젝트', 'audreyHepbun', 'giver2', 'receivePeople2', '무료컷팅');
-insert into probono_project values(probono_project_id_seq.nextval, '키다리아저씨 프로젝트', 'schweitzer', 'giver3', 'receivePeople3', '장학금지원');
+-- company 테이블 기업 저장
+insert into company values('한솥도시락(부산대북문점)','기업소개글1','부산광역시 금정구 장전2동 금강로279번길 81-14','010-9280-7637')
+insert into company values('GS25대구역자이점','기업소개글2','대구광역시 중구 서성로 99 104동 상가 141호 대구역센트럴자이','010-8920-8402')
+insert into company values('이마트 천안서북점 이니스프리','기업소개글3','서북구 삼성대로 20 천안서북점 이니스프리','010-5326-4292')
+-- member 테이블 회원 저장
+insert into member values('kwon0329','restplease00','권희성','kwon0329@naver.com')
+insert into member values('wook999','chukchuk123','장종욱','wook999@gmail.com')
+insert into member values('moon77','lovecat522','장문희','moon77@naver.com')
 
 commit;

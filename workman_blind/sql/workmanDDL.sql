@@ -15,13 +15,14 @@ CREATE TABLE member (
        user_id              VARCHAR2(20)  PRIMARY KEY,
        user_pw            VARCHAR2(20) NOT NULL,
        user_name            VARCHAR2(20) NOT NULL,
-       user_email           VARCHAR2(50) NOT NULL
+       user_email           VARCHAR2(50) NOT NULL,
+       company_name			VARCHAR2(20)
 );
 
 CREATE TABLE parttimelist (
        text_list             NUMBER(10) PRIMARY KEY,
-       user_id               VARCHAR2(20) NOT NULL,
        company_name               VARCHAR2(40) NOT NULL,
+       user_id					VARCHAR2(20) NOT NULL,
        review_num   			NUMBER(10) NOT NULL,
        review_score          NUMBER(10,1) NOT NULL,
        recruit_status        VARCHAR2(40) NOT NULL,
@@ -32,21 +33,22 @@ CREATE TABLE parttimelist (
 
 CREATE TABLE parttimeeval (
 	   text_eval             NUMBER(10) PRIMARY KEY,
-       text_list             VARCHAR2(50),
-       user_id      VARCHAR2(20) NOT NULL,
-       pros_cons     VARCHAR2(20) NOT NULL,
-       hourly_wage   			Number(10) NOT NULL,
+       text_list             VARCHAR2(50) NOT NULL,
+       user_id      		VARCHAR2(20) NOT NULL,
+       company_name			VARCHAR2(20) NOT NULL,
+       pros_cons     		VARCHAR2(20) NOT NULL,
+       hourly_wage   		Number(10) NOT NULL,
        environment          VARCHAR2(20) NOT NULL,
-       incline        VARCHAR2(20) NOT NULL,
-       work_dif   VARCHAR2(20) NOT NULL,
-       experience   VARCHAR2(50) NOT NULL
+       incline        		VARCHAR2(20) NOT NULL,
+       work_dif   			VARCHAR2(20) NOT NULL,
+       experience   		CLOB NOT NULL
 );
 
 CREATE TABLE company (
-	company_name	varchar2(20)	NOT NULL,
-	company_story	CLOB	NOT NULL,
-	company_loc	varchar2(40)	NOT NULL,
-	company_num	varchar2(20)	NOT NULL
+	company_name		varchar2(20)	NOT NULL,
+	company_story		CLOB	NOT NULL,
+	company_loc			varchar2(40)	NOT NULL,
+	company_num			varchar2(20)	NOT NULL
 );
 
 
