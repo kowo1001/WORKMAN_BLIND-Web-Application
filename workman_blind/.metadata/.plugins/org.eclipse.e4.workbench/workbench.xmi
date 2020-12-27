@@ -11,6 +11,7 @@
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1609079819286"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
     <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_8tilQkhQEeuAyJgQ4gNUcg" selectedElement="_8tjzYEhQEeuAyJgQ4gNUcg" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_8tjzYEhQEeuAyJgQ4gNUcg" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_9XNNUEhQEeuAyJgQ4gNUcg">
         <children xsi:type="advanced:Perspective" xmi:id="_9XNNUEhQEeuAyJgQ4gNUcg" elementId="org.eclipse.jst.j2ee.J2EEPerspective" selectedElement="_9XNNUUhQEeuAyJgQ4gNUcg" label="Java EE" iconURI="platform:/plugin/org.eclipse.jst.j2ee.ui/icons/full/cview16/j2ee_perspective.gif">
@@ -205,7 +206,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_9W0y0EhQEeuAyJgQ4gNUcg" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.navigator.resources.ProjectExplorer"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.navigator.resources"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1609079819286&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <tags>active</tags>
@@ -331,7 +332,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9FyGIEhQEeuAyJgQ4gNUcg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_9GFoIEhQEeuAyJgQ4gNUcg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_8Jp1GEhQEeuAyJgQ4gNUcg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_rUFvsEhcEeuvG97WCWqVDw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_8Jp1GEhQEeuAyJgQ4gNUcg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9FytMEhQEeuAyJgQ4gNUcg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -344,10 +345,10 @@
         <tags>toolbarSeparator</tags>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_9FzUQUhQEeuAyJgQ4gNUcg" elementId="additions" toBeRendered="false"/>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_9swmkEhQEeuAyJgQ4gNUcg" elementId="com.objectaid.uml.addon.cls.alignment">
+      <children xsi:type="menu:ToolBar" xmi:id="_9swmkEhQEeuAyJgQ4gNUcg" elementId="com.objectaid.uml.addon.cls.alignment" visible="false">
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_9uqrEEhQEeuAyJgQ4gNUcg" elementId="com.objectaid.uml.addon.cls.display">
+      <children xsi:type="menu:ToolBar" xmi:id="_9uqrEEhQEeuAyJgQ4gNUcg" elementId="com.objectaid.uml.addon.cls.display" visible="false">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9v4MAEhQEeuAyJgQ4gNUcg" elementId="org.eclipse.debug.ui.launchActionSet">
@@ -371,7 +372,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9Fz7UEhQEeuAyJgQ4gNUcg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_9GHdUEhQEeuAyJgQ4gNUcg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_8JpOJUhQEeuAyJgQ4gNUcg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_rUKoMEhcEeuvG97WCWqVDw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_8JpOJUhQEeuAyJgQ4gNUcg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9F0iYEhQEeuAyJgQ4gNUcg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1678,12 +1679,6 @@
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.wst.xsl.ui"/>
     <tags>View</tags>
     <tags>categoryTag:XML</tags>
-  </descriptors>
-  <descriptors xmi:id="_8RuL8EhQEeuAyJgQ4gNUcg" elementId="diagramTable" label="Diagrams" iconURI="platform:/plugin/com.objectaid.uml.addon/icons/class-diagram.gif" tooltip="" category="ObjectAid" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
-    <persistedState key="originalCompatibilityViewClass" value="com.objectaid.uml.addon.diagrams.DiagramTableView"/>
-    <persistedState key="originalCompatibilityViewBundle" value="com.objectaid.uml.addon"/>
-    <tags>View</tags>
-    <tags>categoryTag:ObjectAid</tags>
   </descriptors>
   <menuContributions xmi:id="_8INqp0hQEeuAyJgQ4gNUcg" elementId="org.eclipse.ui.window.customizePerspective" contributorURI="platform:/plugin/org.eclipse.platform" positionInParent="popup:toolbar">
     <children xsi:type="menu:HandledMenuItem" xmi:id="_8INqqEhQEeuAyJgQ4gNUcg" elementId="org.eclipse.ui.window.customizePerspective" contributorURI="platform:/plugin/org.eclipse.platform" label="%command.name.customize" command="_8INqqUhQEeuAyJgQ4gNUcg"/>
@@ -3040,7 +3035,7 @@
   <addons xmi:id="_8IORuEhQEeuAyJgQ4gNUcg" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_8IORuUhQEeuAyJgQ4gNUcg" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_8IiawEhQEeuAyJgQ4gNUcg" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_qLvnkUhcEeuvG97WCWqVDw" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_8JakgEhQEeuAyJgQ4gNUcg" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_8JakgUhQEeuAyJgQ4gNUcg" elementId="org.eclipse.mylyn.wikitext.ui.editor.category" name="WikiText Markup Editing Commands" description="commands for editing lightweight markup"/>
