@@ -71,5 +71,5 @@ public class Parttimeeval {
 	
 	@Column(name = "experience")
 	private String experience;
-
+//test
 }
