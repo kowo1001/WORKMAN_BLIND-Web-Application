@@ -20,27 +20,37 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@SequenceGenerator(name = "company_seq_gen", sequenceName = "company_seq_id", initialValue = 1, allocationSize = 50) 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+
 
 @Entity
 public class Company {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "company_seq_gen")
 	@Column(name = "company_name")
-	private long companyname;
+	private String companyname;
 	
 	@Column(name = "company_story")
-	private long companystory;
+	private String companystory;
 	
 	@Column(name = "company_loc")
-	private long companyloc;
+	private String companyloc;
 	
 	@Column(name = "company_num")
-	private long companynum;
+	private String companynum;
 	
-	@OneToMany(mappedBy = "company")
+	@OneToMany(mappedBy = "companyname")
 	private List<Member> members;
+	
+	@OneToMany(mappedBy = "companyname")
+	private List<Parttimelist> parttimelists;
+	
+	@OneToMany(mappedBy = "companyname")
+	private List<Parttimeeval> parttimeevals;
 	
 
 }

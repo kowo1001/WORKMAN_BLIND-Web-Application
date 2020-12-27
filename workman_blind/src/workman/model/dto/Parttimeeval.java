@@ -35,6 +35,13 @@ import lombok.Setter;
 
 @SequenceGenerator(name = "parteval_seq_gen", sequenceName = "parteval_seq_id", initialValue = 1, allocationSize = 50) 
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+
+
 @Entity
 public class Parttimeeval {
 
@@ -44,12 +51,12 @@ public class Parttimeeval {
 	private long texteval;
 	
 	@ManyToOne
-	@JoinColumn(name = "text_list")
-	private Parttimelist parttimelist;
+	@Column(name = "text_list")
+	private Parttimelist textlist;
 	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
-	private Member members; 
+	private Member userid; 
 	
 	@ManyToOne
 	@JoinColumn(name = "company_name")
@@ -72,5 +79,5 @@ public class Parttimeeval {
 	
 	@Column(name = "experience")
 	private String experience;
-//test
+
 }
