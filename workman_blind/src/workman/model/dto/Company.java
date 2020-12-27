@@ -47,10 +47,10 @@ public class Company {
 	private List<Member> members;
 	
 	@OneToMany(mappedBy = "companyname")
-	private List<Parttimelist> parttimelists;
+	private List<ParttimeList> parttimelists;
 	
 	@OneToMany(mappedBy = "companyname")
-	private List<Parttimeeval> parttimeevals;
+	private List<ParttimeEval> parttimeevals;
 	
 
 }

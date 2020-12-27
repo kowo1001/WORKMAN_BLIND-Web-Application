@@ -29,7 +29,7 @@ import lombok.Setter;
 @Builder
 
 @Entity
-public class Parttimelist {
+public class ParttimeList {
 	
 	@Id 
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "partlist_seq_gen")
@@ -60,7 +60,7 @@ public class Parttimelist {
 	private String empperiod;
 	
 	@OneToMany(mappedBy="textlist")
-	private List<Parttimeeval> parttimeevals; 
+	private List<ParttimeEval> parttimeevals; 
 
 }
 
