@@ -1,4 +1,5 @@
-package workman.model.dto;
+package workman.model;
+
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -6,10 +7,11 @@ import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import workman.model.dto.Member;
 import workman.model.util.PublicCommon;
 
 public class MemberDAO {
-	
+
 	public static void addMember(String user_id, String user_pw, String user_name, String user_email) throws SQLException {
 		
 		EntityManager em = PublicCommon.getEntityManager();
@@ -17,7 +19,7 @@ public class MemberDAO {
 		tx.begin();
 		
 		try {
-			Member member = Member.builder().user_id(user_id),user_pw(user_pw),user_name(user_name),user_email(user_email).build();
+			Member member = Member.builder().user_id(user_id).user_pw(user_pw).user_name(user_name).user_email(user_email).build();
 			em.persist(member);
 			tx.commit();
 
@@ -30,19 +32,17 @@ public class MemberDAO {
 			em.close();
 		}
 	}
-	
 
-	
-	public static void updateMemberPw (String user_id, String user_pw) throws SQLException {
+	public static void updateMemberPw(String user_id, String user_pw) throws SQLException {
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		
+
 		try {
 			Member member = em.find(Member.class, user_id);
 			member.setUser_pw(user_pw);
 			tx.commit();
-			
+
 		} catch (Exception e) {
 
 			tx.rollback();
@@ -55,17 +55,17 @@ public class MemberDAO {
 		}
 
 	}
-	
-	public static void updateMemberName (String user_id, String user_name) throws SQLException {
+
+	public static void updateMemberName(String user_id, String user_name) throws SQLException {
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		
+
 		try {
 			Member member = em.find(Member.class, user_name);
 			member.setUser_name(user_name);
 			tx.commit();
-			
+
 		} catch (Exception e) {
 
 			tx.rollback();
@@ -78,17 +78,17 @@ public class MemberDAO {
 		}
 
 	}
-	
-	public static void updateMemberEmail (String user_id, String user_email) throws SQLException {
+
+	public static void updateMemberEmail(String user_id, String user_email) throws SQLException {
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		
+
 		try {
 			Member member = em.find(Member.class, user_email);
 			member.setUser_email(user_email);
 			tx.commit();
-			
+
 		} catch (Exception e) {
 
 			tx.rollback();
@@ -101,13 +101,13 @@ public class MemberDAO {
 		}
 
 	}
-	
+
 	public static void deleteMember(String user_id) throws SQLException {
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		
-	try {
+
+		try {
 			Member member = em.find(Member.class, user_id);
 			em.remove(member);
 			tx.commit();
@@ -123,12 +123,12 @@ public class MemberDAO {
 
 		}
 	}
-	
+
 	public static Member getMember(String user_id) throws SQLException {
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
-		
+
 		Member member = null;
 		try {
 			member = em.find(Member.class, user_id);
@@ -146,7 +146,7 @@ public class MemberDAO {
 		}
 		return member;
 	}
-	
+
 	public static ArrayList<Member> getAllMember() throws SQLException {
 
 		EntityManager em = PublicCommon.getEntityManager();
@@ -154,8 +154,7 @@ public class MemberDAO {
 		tx.begin();
 		ArrayList<Member> memlist = null;
 		try {
-			memlist = (ArrayList<Member>) em.createNativeQuery("select * from member", Member.class)
-					.getResultList();
+			memlist = (ArrayList<Member>) em.createNativeQuery("select * from member", Member.class).getResultList();
 			tx.commit();
 
 		} catch (Exception e) {
@@ -170,6 +169,5 @@ public class MemberDAO {
 		}
 		return memlist;
 	}
-	
 
 }
