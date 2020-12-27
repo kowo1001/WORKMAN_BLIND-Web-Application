@@ -39,7 +39,7 @@ public class Company {
 	@Column(name = "company_num")
 	private long companynum;
 	
-	@OneToMany(mappedBy = "company_name")
+	@OneToMany(mappedBy = "company")
 	private List<Member> members;
 	
 

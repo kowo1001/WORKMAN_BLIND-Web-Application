@@ -42,13 +42,14 @@ public class Parttimeeval {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "parteval_seq_gen")
 	@Column(name = "text_eval")
 	private long texteval;
-
-	@Column(name = "text_list")
-	private String textlist;
+	
+	@ManyToOne
+	@JoinColumn(name = "text_list")
+	private Parttimelist parttimelist;
 	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
-	private Parttimelist parttimelist; 
+	private Member members; 
 	
 	@ManyToOne
 	@JoinColumn(name = "company_name")
