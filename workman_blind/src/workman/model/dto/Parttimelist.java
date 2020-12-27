@@ -25,9 +25,9 @@ public class Parttimelist {
 	@Column(name="text_list")
 	private Long textlist;
 	
-	@ManyToOne
+	@OneToMany
 	@JoinColumn(name="user_id")
-	private Member members;
+	private List<Member> members;
 	
 	@ManyToOne
 	@JoinColumn(name="company_name")

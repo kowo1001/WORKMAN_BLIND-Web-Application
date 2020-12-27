@@ -34,12 +34,4 @@ public class Member {
 	@Column(name="user_email")
 	private String user_email;
 	
-	@OneToMany(mappedBy="members")
-	private List<Parttimeeval> parttimeeval = new ArrayList<>();
-	
-	@OneToMany(mappedBy="members")
-	private List<Parttimelist> parttimelist = new ArrayList<>();
-	
-
-
 }
