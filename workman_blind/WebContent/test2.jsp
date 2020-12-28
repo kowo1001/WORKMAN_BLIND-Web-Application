@@ -5,7 +5,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-<link href="${pageContext.request.contextPath}/css/test.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/css/test2.css" rel="stylesheet">
 </head>
 <body id="ReputeList" class="story albaRepute scroll">
 
@@ -21,12 +21,7 @@
 		<div class="head">
 			
 			<div class="heading albaRepute">
-				<h1>알바리뷰</h1>
-				<p>
-					아르바이트 구직 환경 개선을 위해 회원님들의 소중한 경험을 나누는 공간입니다.<br>
-					이력서 항목 중 경력사항으로 작성된 기업 대상으로 직접 근무하고 경험한 정보를 공유하고,<br>
-					작성한 정보를 통해 입사 지원 시 유용한 정보로 활용하시기 바랍니다.
-				</p>
+				
 			</div>
 	
 		
@@ -96,14 +91,14 @@
 	
 			<form method="get" name="formSrchPublic" id="formSrchPublic" action="/story/repute/ReputeList.asp">
 			<div class="searchBox">
-				<span>기업명</span><input type="text" title="기업명 입력" id="schtext" name="schtext" value="" maxlength="50"><input type="submit" class="searchBtn" title="검색" value="검색">
+				<span>기업명</span>&nbsp;<input type="text" title="기업명 입력" id="schtext" name="schtext" value="" maxlength="50">&nbsp;<input type="submit" class="searchBtn" title="검색" value="검색">
 			</div>
 			<div class="formList">
 				<div class="listTop">
 					<!--p class="total">총 <span></span>건</p-->
 					<p class="total">
-						<span class="cntRepute"><span></span> 리뷰수 <em>341,481</em>건</span>
-						<span class="cntCompany"><span></span> 기업수 <em>208,662</em>개</span>
+						<!-- <span class="cntRepute"><span></span> 리뷰수 <em>341,481</em>건</span>
+						<span class="cntCompany"><span></span> 기업수 <em>208,662</em>개</span> 나중에-->
 					</p>
 				</div>
 				<table summary="알바리뷰 기업목록으로 기업의 리뷰정보를 확인할 수 있습니다">
@@ -127,10 +122,10 @@
 					<tbody>
 						<!-- 공지사항 -->
 						
-	<tr class="notice">
+	<!-- <tr class="notice">
 		<td class="cnt"><span>공지</span></td>
 		<td colspan="5" class="notice-tit"><a href="/story/albastory/Detail.asp?idx=2979"><strong>알바리뷰 작성 안내</strong></a></td>
-	</tr>
+	</tr> 나중에 -->
 						<!-- //공지사항 -->
 	
 						<!-- 리뷰정보 기업리스트 -->

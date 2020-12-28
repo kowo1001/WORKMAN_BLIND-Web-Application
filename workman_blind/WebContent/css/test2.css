@@ -91,6 +91,53 @@ a:link, a:visited {
     background-position: -134px 0;
 }
 
+.repute-select-next>span {
+    background-position: -134px -22px;
+}
+
+.repute-select-next {
+    right: 0;
+}
+
+.head .albaRepute {
+    height: 180px;
+    background-image: url(//image.alba.kr/story/top_repute.png);
+}
+
+
+.repute-select-btn {
+    position: absolute;
+    top: auto;
+    bottom: 1px;
+    width: 34px;
+    height: 49px;
+    padding-top: 31px;
+    text-align: center;
+    font: 0/0 'Malgun Gothic';
+    color: transparent;
+    background-color: #fff;
+}
+
+
+a:-webkit-any-link {
+    cursor: pointer;
+}
+
+.repute-select-btn {
+    position: absolute;
+    top: auto;
+    bottom: 1px;
+    width: 34px;
+    height: 49px;
+    padding-top: 31px;
+    text-align: center;
+    font: 0/0 'Malgun Gothic';
+    color: transparent;
+    background-color: #fff;
+}
+
+
+
 .repute-select-btn>span {
     display: inline-block;
     width: 10px;
@@ -174,6 +221,325 @@ thead {
     vertical-align: middle;
     border-color: inherit;
 }
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+
+.formList table {
+    table-layout: fixed;
+    width: 100%;
+    *border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 1px solid #dadada;
+}
+
+.reputeList .formList table th.cnt {
+    width: 74px;
+}
+
+.formList table thead th {
+    height: 34px;
+    font-size: 11px;
+    color: #474747;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.reputeList .formList table th.workcomnm {
+    width: auto;
+}
+
+.reputeList .formList table th.repcnt {
+    width: 90px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #222;
+}
+
+.reputeList .formList table th.repscore {
+    width: 100px;
+}
+
+.reputeList .formList table th.repscore .wrap {
+    position: relative;
+    font-weight: bold;
+}
+
+.reputeList .formList table th.repscore .icon {
+    display: inline-block;
+    width: 16px;
+    height: 18px;
+    margin-top: -1px;
+    vertical-align: top;
+    background: url(//image.alba.kr/story/repute1.png) no-repeat -60px -118px;
+}
+
+.reputeList .formList table th.repscore .markReputeHelp {
+    left: -77px;
+}
+
+.markReputeHelp {
+    display: none;
+    position: absolute;
+    top: auto;
+    bottom: 24px;
+    left: -89px;
+    width: 172px;
+    padding: 7px 10px;
+    border: 1px solid #666;
+    font: 12px/1.3 'Malgun Gothic','AppleGothicNeoSD','Microsoft NeoGothic','Droid sans',Sans-serif;
+    color: #666;
+    background-color: #fff;
+}
+
+.reputeList .formList table th.jobing {
+    width: 110px;
+}
+
+img {
+    vertical-align: top;
+}
+
+.formList table thead th img {
+    margin: 1px 0 0 3px;
+}
+
+.reputeList .formList table th img {
+    margin-top: 2px;
+}
+
+.reputeList .formList table th.lastregymd {
+    width: 110px;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.formList table tbody td.cnt {
+    color: #767676;
+}
+
+.reputeList .formList table td.workcomnm {
+    padding-left: 20px;
+    letter-spacing: -1px;
+    text-align: left;
+}
+
+.reputeList .formList table td {
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.reputeList .formList table td.repscore {
+    padding-left: 30px;
+    text-align: left;
+}
+
+.reputeList .formList table td {
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.formList table tbody td {
+    padding: 12px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.reputeList .formList table td.repscore .icon {
+    display: inline-block;
+    width: 14px;
+    height: 15px;
+    margin: 2px 0 0;
+    vertical-align: top;
+    background: url(//image.alba.kr/story/repute1.png) no-repeat -100px -120px;
+}
+
+.reputeList .formList table td.repscore {
+    padding-left: 30px;
+    text-align: left;
+}
+
+.reputeList .formList table td.repscore .text {
+    display: inline-block;
+    width: 22px;
+    text-align: center;
+}
+
+.formList table {
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    border-bottom: 1px solid #dadada;
+}
+
+.pagenation {
+    position: relative;
+    padding: 20px 0 30px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.pagenation span.page {
+    *margin-right: 8px;
+    border: 0 none;
+}
+
+.pagenation span {
+    display: inline-block;
+    height: 30px;
+    margin-right: 4px;
+    font-size: 14px;
+    font-family: 'Malgun Gothic';
+    vertical-align: top;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+}
+
+.pagenation span.page a:hover, .pagenation span.page a.on {
+    font-weight: bold;
+    border: 1px solid #83c9ff;
+    color: #267cd3;
+}
+
+.pagenation span.page a {
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    padding: 6px 0 0;
+    margin: 0 2px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+}
+
+.pagenation span.total {
+    position: relative;
+    width: 120px;
+    height: 32px;
+    border: 0 none;
+}
+
+.pagenation span {
+    display: inline-block;
+    height: 30px;
+    margin-right: 4px;
+    font-size: 14px;
+    font-family: 'Malgun Gothic';
+    vertical-align: top;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+}
+
+.pagenation {
+    position: relative;
+    padding: 20px 0 30px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.pagenation span.total .totalBtn {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 118px;
+    height: 30px;
+    background: #f4f4f4;
+    cursor: pointer;
+}
+
+.pagenation span.total .totalBtn .state {
+    display: block;
+    height: 24px;
+    padding: 6px 0 0;
+    text-align: center;
+    font-weight: bold;
+    border: 0 none;
+}
+
+.pagenation span.total .totalBtn a.first {
+    top: 30px;
+}
+
+
+
+.pagenation span.total .totalBtn a {
+    position: absolute;
+    left: 0;
+    width: 105px;
+    height: 24px;
+    padding: 6px 0 0 15px;
+    text-align: left;
+}
+
+.pagenation span.total .totalBtn {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 118px;
+    height: 30px;
+    background: #f4f4f4;
+    cursor: pointer;
+}
+
+.pagenation span.pageBtn {
+    border: 0 none;
+}
+
+.pagenation span.pageBtn a.next {
+    margin-left: -1px;
+}
+
+.pagenation span.pageBtn a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 1.4;
+    text-decoration: none;
+    background: #f4f4f4;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
