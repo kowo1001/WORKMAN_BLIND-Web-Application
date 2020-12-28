@@ -12,6 +12,9 @@ https://ovenapp.io/project/VAWmAEwLwYoCOj8CLJ8i0hJKVkupt41v#f5ld6
 # 시나리오
 
 # 고객관점
+## 회원가입 및 로그인 - CREATE
+1. 로그인 페이지에서 로그인
+3. 로그인 성공 페이지 -> 회원정보수정/탈퇴 
 
 ## 알바 평가게시판 작성 - CREATE
 1. 회원가입 또는 로그인
