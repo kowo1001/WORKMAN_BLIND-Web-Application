@@ -8,5 +8,5 @@
 		<input type="button" value="메인으로 이동" Onclick="location.href='index.html'">
 		</center>
 		
-
+		
 		
