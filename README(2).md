@@ -115,7 +115,7 @@
 ### Structure
 
 <div>
-    <img width="800" src="https://mail.naver.com/read/image/?mailSN=10689&attachIndex=2&contentType=image/png&offset=1383&size=243896&mimeSN=1609182268.742215.29085.55040&org=1&u=janghee234">
+    <img width="800" src="/read/image/?mailSN=10689&attachIndex=2&contentType=image/png&offset=1383&size=243896&maxSize=200&mimeSN=1609182268.742215.29085.55040&u=janghee234">
 </div>
 
 ---
