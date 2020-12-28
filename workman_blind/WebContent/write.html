@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>회원가입</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+	<h3>회원가입</h3>
+	<br>
+	  <!-- write Form  -->
+	 <form action="CustomerServlet" method="post">
+	 
+	 <input type="hidden" name="command" value="insert">
+	  
+	  <table border="1" cellspacing="1" width="60%">
+		  <tr>
+			<td width=30% align=center >사용자 아이디</td>
+			<td width=70%>
+				<input type="text" name="userid">
+			</td>
+		  </tr>
+		  <tr>
+			<td width=30% align=center >비밀번호</td>
+			<td width=70%>
+				<input type="password" name="userpw">
+			</td>
+		  </tr>
+		  
+		  <tr>
+			<td width=30% align=center>이름</td>
+			<td width=70% >
+				<input type="text" name="username">
+			</td>
+		  </tr>
+		  <tr>
+			<td width=30% align=center >이메일 주소</td>
+			<td width=70% >
+				<input type="text" name="useremail" size="50">
+			</td>
+		  </tr>		  
+	  </table>
+	 <br><br>
+	 <input type="submit" value="회원가입">&nbsp;
+	 <input type="reset" value="취소">&nbsp;
+
+	 <input type="button" value="메인으로 이동" Onclick="location.href='index.html'">
+	 </form>	 
+
+
+</body>
+</html>
