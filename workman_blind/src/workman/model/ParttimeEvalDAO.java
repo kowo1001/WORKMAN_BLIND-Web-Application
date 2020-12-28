@@ -6,42 +6,50 @@ import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import lombok.extern.slf4j.Slf4j;
 import workman.model.dto.Company;
 import workman.model.dto.ParttimeEval;
 import workman.model.util.PublicCommon;
 
 public class ParttimeEvalDAO {
 
-	public static void addPTEval(String proscons, long hourlywage, String environment, String incline, String workdif,
+	public static boolean addPTEval(String proscons, long wage, String environment, String incline, String workdif,
 			String experience) throws SQLException {
 
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
+		
+		boolean result = false;
 
 		try {
-			ParttimeEval pteval = ParttimeEval.builder().proscons(proscons).hourlywage(hourlywage)
+			ParttimeEval pteval = ParttimeEval.builder().proscons(proscons).wage(wage)
 					.environment(environment).incline(incline).workdif(workdif).experience(experience).build();
 
 			em.persist(pteval);
 			tx.commit();
+			
+			result = true;
 
 		} catch (Exception e) {
 
 			tx.rollback();
-			e.printStackTrace();
-
+			
 		} finally {
 
 			em.close();
 
 		}
+		return result;
 	}
 
-	public static void updatePTEvalProCon(Long texteval, String proscons) throws SQLException {
+	public static boolean updatePTEvalProCon(Long texteval, String proscons) throws SQLException {
+		
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
+		
+		boolean result = false;
 
 		try {
 
@@ -49,47 +57,58 @@ public class ParttimeEvalDAO {
 
 			pteval.setProscons(proscons);
 			tx.commit();
+			
+			result = true;
 
 		} catch (Exception e) {
 
 			tx.rollback();
-			e.printStackTrace();
 
 		} finally {
 
 			em.close();
 		}
+		return result;
 	}
 
-	public static void updatePTEvalHourWage(Long texteval, Long hourlywage) throws SQLException {
+	public static boolean updatePTEvalWage(Long texteval, Long wage) throws SQLException {
+		
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
+		
+		boolean result = false;
 
 		try {
 
 			ParttimeEval pteval = em.find(ParttimeEval.class, texteval);
 
-			pteval.setHourlywage(hourlywage);
+			pteval.setWage(wage);
 			tx.commit();
+			
+			result = true;
 
 		} catch (Exception e) {
 
 			tx.rollback();
-			e.printStackTrace();
+			
 
 		} finally {
 
 			em.close();
 
 		}
+		return result;
 	}
 	
 	
-	public static void updatePTEvalEnv(Long texteval, String environment) throws SQLException {
+	public static boolean updatePTEvalEnv(Long texteval, String environment) throws SQLException {
+	
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
+		
+		boolean result = false;
 
 		try {
 
@@ -97,24 +116,29 @@ public class ParttimeEvalDAO {
 
 			pteval.setEnvironment(environment);
 			tx.commit();
+			
+			result = true;
 
 		} catch (Exception e) {
 
 			tx.rollback();
-			e.printStackTrace();
 
 		} finally {
 
 			em.close();
 
 		}
+		return result;
 	}
 	
 	
-	public static void updatePTEvalInc(Long texteval, String incline) throws SQLException {
+	public static boolean updatePTEvalInc(Long texteval, String incline) throws SQLException {
+	
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
+		
+		boolean result = false;
 
 		try {
 
@@ -122,24 +146,29 @@ public class ParttimeEvalDAO {
 
 			pteval.setIncline(incline);
 			tx.commit();
+			
+			result = true;
 
 		} catch (Exception e) {
 
 			tx.rollback();
-			e.printStackTrace();
 
 		} finally {
 
 			em.close();
 
 		}
+		return result;
 	}
 	
 	
-	public static void updatePTEvalWorkDif(Long texteval, String workdif) throws SQLException {
+	public static boolean updatePTEvalWorkDif(Long texteval, String workdif) throws SQLException {
+	
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
+		
+		boolean result = false;
 
 		try {
 
@@ -147,24 +176,29 @@ public class ParttimeEvalDAO {
 
 			pteval.setWorkdif(workdif);
 			tx.commit();
+			
+			result = true;
 
 		} catch (Exception e) {
 
 			tx.rollback();
-			e.printStackTrace();
 
 		} finally {
 
 			em.close();
 
 		}
+		return result;
 	}
 	
 	
-	public static void updatePTEvalExp(Long texteval, String experience) throws SQLException {
+	public static boolean updatePTEvalExp(Long texteval, String experience) throws SQLException {
+	
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
+		
+		boolean result = false;
 
 		try {
 
@@ -172,24 +206,29 @@ public class ParttimeEvalDAO {
 
 			pteval.setExperience(experience);
 			tx.commit();
+			
+			result = true;
 
 		} catch (Exception e) {
 
 			tx.rollback();
-			e.printStackTrace();
 
 		} finally {
 
 			em.close();
 
 		}
+		return result;
 	}
 
 	
-	public static void deletePTEval(Long texteval) throws SQLException {
+	public static boolean deletePTEval(Long texteval) throws SQLException {
+		
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
+		
+		boolean result = false;
 		
 	try {
 			
@@ -197,36 +236,38 @@ public class ParttimeEvalDAO {
 			
 			em.remove(pteval);
 			tx.commit();
+			
+			result = true;
 
 		} catch (Exception e) {
 
 			tx.rollback();
-			e.printStackTrace();
 
 		} finally {
 
 			em.close();
 
 		}
+		return result;
 	}
 	
 	
 	public static ParttimeEval getPTEval(Long texteval) throws SQLException {
+	
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		
 		ParttimeEval pteval = null;
+		
 		try {
-			pteval = em.find(ParttimeEval.class, texteval);
 			
-			tx.commit();
+			pteval = em.find(ParttimeEval.class, texteval);
 
 		} catch (Exception e) {
 
-			tx.rollback();
-			e.printStackTrace();
-
+			// log
+			
 		} finally {
 
 			em.close();
@@ -237,21 +278,22 @@ public class ParttimeEvalDAO {
 	
 	
 	public static ArrayList<ParttimeEval> getAllPTEval() throws SQLException {
+	
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
+		
 		ArrayList<ParttimeEval> ptevallist = null;
+		
 		try {
+			
 			ptevallist = (ArrayList<ParttimeEval>) em.createNativeQuery("select * from parttimeeval", ParttimeEval.class)
 					.getResultList();
 
-			tx.commit();
-
 		} catch (Exception e) {
 
-			tx.rollback();
-			e.printStackTrace();
-
+			// log
+			
 		} finally {
 
 			em.close();

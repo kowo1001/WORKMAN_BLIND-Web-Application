@@ -27,20 +27,20 @@ public class Member {
 	
 	@Id 
 	@Column(name = "user_id")
-	private String user_id;
+	private String userid;
 	
 	@ManyToOne
 	@JoinColumn(name = "company_name")
 	private Company companyname;
 	
 	@Column(name = "user_pw")
-	private String user_pw;
+	private String userpw;
 	
 	@Column(name = "user_name")
-	private String user_name;
+	private String username;
 	
 	@Column(name = "user_email")
-	private String user_email;
+	private String useremail;
 	
 	@OneToMany(mappedBy = "userid")
 	private List<ParttimeEval> parttimeevals;
@@ -48,4 +48,6 @@ public class Member {
 	@OneToMany(mappedBy = "userid")
 	private List<ParttimeList> parttimelists;
 	
+
+
 }

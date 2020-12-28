@@ -65,8 +65,8 @@ public class ParttimeEval {
 	@Column(name = "pros_cons")
 	private String proscons;
 
-	@Column(name = "hourly_wage")
-	private long hourlywage;
+	@Column(name = "wage")
+	private long wage;
 	
 	@Column(name = "environment")
 	private String environment;

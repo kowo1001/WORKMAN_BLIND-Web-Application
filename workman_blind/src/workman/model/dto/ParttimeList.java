@@ -34,12 +34,12 @@ public class ParttimeList {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "partlist_seq_gen")
 	@Column(name="text_list")
-	private long textlist;
+	private Long textlist;
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
 	private Member userid;
-
+	
 	@ManyToOne
 	@JoinColumn(name="company_name")
 	private Company companyname;
