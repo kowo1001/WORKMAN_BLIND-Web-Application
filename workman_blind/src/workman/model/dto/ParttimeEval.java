@@ -51,7 +51,7 @@ public class ParttimeEval {
 	private long texteval;
 	
 	@ManyToOne
-	@Column(name = "text_list")
+	@JoinColumn(name = "text_list")
 	private ParttimeList textlist;
 	
 	@ManyToOne

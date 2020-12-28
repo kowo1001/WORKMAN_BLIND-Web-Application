@@ -288,7 +288,7 @@ public class WorkmanFrontController extends HttpServlet {
 				WorkmanService.addMember(id, pw, name, email);
 				request.getSession().setAttribute("Member", WorkmanService.getMember(id));
 
-				url = "Memberdetail.jsp";
+				url = "writeSucess.jsp";
 
 			} else {
 				request.setAttribute("errorMsg", "다시 시도하세요");
