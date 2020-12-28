@@ -114,6 +114,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 
 			request.getSession().setAttribute("Companyall", WorkmanService.getAllCompany());
+			log.info("모든 회사 조회 에러 성공");
 			url = "Companylist.jsp";
 
 		} catch (Exception s) {
@@ -133,6 +134,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 			request.getSession().setAttribute("Company",
 					WorkmanService.getCompany(request.getParameter("Companyname")));
+			log.info("특정 회사 조회 성공");
 			url = "Companydetail.jsp";
 
 		} catch (Exception s) {
@@ -160,7 +162,7 @@ public class WorkmanFrontController extends HttpServlet {
 				request.getSession().setAttribute("successMsg", "등록 완료");
 				WorkmanService.addCompany(name, story, loc, num);
 				request.getSession().setAttribute("Company", WorkmanService.getCompany(name));
-
+				log.info("회사 등록 성공");
 				url = "Companydetail.jsp";
 
 			} else {
@@ -169,7 +171,7 @@ public class WorkmanFrontController extends HttpServlet {
 		} catch (Exception s) {
 
 			request.setAttribute("errorMsg", s.getMessage());
-			log.info("회사 등록 성공");
+			log.info("회사 등록 실패");
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
@@ -182,6 +184,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 			request.getSession().setAttribute("Company",
 					WorkmanService.getCompany(request.getParameter("Companyname")));
+			log.info("회사 정보 갱신 요청 성공");
 			url = "Companyupdate.jsp";
 
 		} catch (Exception s) {
@@ -202,6 +205,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 			WorkmanService.updateCompanyNum(name, num);
 			request.getSession().setAttribute("Company", WorkmanService.getCompany(name));
+			log.info("회사 번호 갱신 성공");
 			url = "Companydetail.jsp";
 
 		} catch (Exception s) {
@@ -222,6 +226,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 				WorkmanService.deleteCompany(name);
 				request.getSession().setAttribute("Companyall", WorkmanService.getAllCompany());
+				log.info("회사 삭제 성공");
 				url = "Companylist.jsp";
 
 			} else {
@@ -242,6 +247,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 
 			request.getSession().setAttribute("Memberall", WorkmanService.getAllMember());
+			log.info("모든 회원 조회 에러 성공");
 			url = "Memberlist.jsp";
 
 		} catch (Exception s) {
@@ -260,6 +266,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 
 			request.getSession().setAttribute("Member", WorkmanService.getMember(request.getParameter("MemberId")));
+			log.info("특정 회원 조회 성공");
 			url = "Memberdetail.jsp";
 
 		} catch (Exception s) {
@@ -287,6 +294,7 @@ public class WorkmanFrontController extends HttpServlet {
 				request.getSession().setAttribute("successMsg", "등록 완료");
 				WorkmanService.addMember(id, pw, name, email);
 				request.getSession().setAttribute("Member", WorkmanService.getMember(id));
+				log.info("회원 등록 성공");
 
 				url = "writeSucess.jsp";
 
@@ -296,7 +304,7 @@ public class WorkmanFrontController extends HttpServlet {
 		} catch (Exception s) {
 
 			request.setAttribute("errorMsg", s.getMessage());
-			log.info("회원 등록 성공");
+			log.info("회원 등록 실패");
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
@@ -308,6 +316,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 		try {
 			request.getSession().setAttribute("Member", WorkmanService.getCompany(request.getParameter("UserId")));
+			log.info("회원 정보 갱신 요청 성공");
 			url = "Memberupdate.jsp";
 
 		} catch (Exception s) {
@@ -328,6 +337,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 			WorkmanService.updateMemberPW(id, pw);
 			request.getSession().setAttribute("Member", WorkmanService.getMember(id));
+			log.info("회원 비밀번호 변경 성공");
 			url = "Memberdetail.jsp";
 
 		} catch (Exception s) {
@@ -348,6 +358,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 				WorkmanService.deleteMember(id);
 				request.getSession().setAttribute("Memberall", WorkmanService.getAllMember());
+				log.info("회원 삭제 성공");
 				url = "Memberlist.jsp";
 
 			} else {
@@ -368,6 +379,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 
 			request.getSession().setAttribute("Ptlistall", WorkmanService.getAllPTList());
+			log.info("모든  알바글 조회 성공");
 			url = "Ptlistall.jsp";
 
 		} catch (Exception s) {
@@ -387,6 +399,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 			request.getSession().setAttribute("Ptlist",
 					WorkmanService.getPTList(Long.valueOf(request.getParameter("TextList"))));
+			log.info("특정 알바글 조회 성공");
 			url = "Ptlistdetail.jsp";
 
 		} catch (Exception s) {
@@ -412,13 +425,14 @@ public class WorkmanFrontController extends HttpServlet {
 
 			request.getSession().setAttribute("successMsg", "등록 완료");
 			WorkmanService.addPTList(reviewnum, reviewscore, recruitstatus, date, empperiod);
+			log.info("알바글 등록 성공");
 			// 개선필요
 			url = "Ptlistdetail.jsp";
 
 		} catch (Exception s) {
 
 			request.setAttribute("errorMsg", s.getMessage());
-			log.info("알바글 등록 성공");
+			log.info("알바글 등록 실패");
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
@@ -431,6 +445,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 			request.getSession().setAttribute("Ptlist",
 					WorkmanService.getPTList(Long.valueOf(request.getParameter("TextList"))));
+			log.info("알바글 정보 갱신 요청 성공");
 			url = "Ptlistupdate.jsp";
 
 		} catch (Exception s) {
@@ -451,6 +466,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 			WorkmanService.updatePTListRecruitstat(textlist, recruitstatus);
 			request.getSession().setAttribute("Ptlist", WorkmanService.getPTList(textlist));
+			log.info("알바글 채용상태 변경 성공");
 			url = "Ptlistdetail.jsp";
 
 		} catch (Exception s) {
@@ -471,6 +487,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 				WorkmanService.deletePTList(textlist);
 				request.getSession().setAttribute("Ptlistall", WorkmanService.getAllPTList());
+				log.info("알바글 삭제 성공");
 				url = "Ptlistall.jsp";
 
 			} else {
@@ -491,6 +508,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 
 			request.getSession().setAttribute("Ptevalall", WorkmanService.getAllPTEval());
+			log.info("모든  평가글 조회 성공");
 			url = "Ptevalall.jsp";
 
 		} catch (Exception s) {
@@ -510,6 +528,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 			request.getSession().setAttribute("Pteval",
 					WorkmanService.getPTList(Long.valueOf(request.getParameter("Texteval"))));
+			log.info("특정 평가글 조회 성공");
 			url = "Ptevaldetail.jsp";
 
 		} catch (Exception s) {
@@ -525,7 +544,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 		String url = "showError.jsp";
 
-		String proscons = request.getParameter("Procons");
+		String proscons = request.getParameter("Proscons");
 		long wage = Long.valueOf(request.getParameter("Wage"));
 		String environment = request.getParameter("Environment");
 		String incline = request.getParameter("Incline");
@@ -537,12 +556,13 @@ public class WorkmanFrontController extends HttpServlet {
 			request.getSession().setAttribute("successMsg", "등록 완료");
 			WorkmanService.addPTEval(proscons, wage, environment, incline, workdif, experience);
 			// 개선필요
-			url = "Ptevaldetail.jsp";
+			log.info("평가글 등록 성공");
+			url = "textWriteSuccess.jsp";
 
 		} catch (Exception s) {
 
 			request.setAttribute("errorMsg", s.getMessage());
-			log.info("평가글 등록 성공");
+			log.info("평가글 등록 실패");
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}
@@ -556,6 +576,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 			request.getSession().setAttribute("Texteval",
 					WorkmanService.getPTEval(Long.valueOf(request.getParameter("texteval"))));
+			log.info("평가글 정보 갱신 요청 성공");
 			url = "Ptevalupdate.jsp";
 
 		} catch (Exception s) {
@@ -576,6 +597,7 @@ public class WorkmanFrontController extends HttpServlet {
 		try {
 			WorkmanService.updatePTEvalExp(texteval, experience);
 			request.getSession().setAttribute("Pteval", WorkmanService.getPTEval(texteval));
+			log.info("평가글 경험담 변경 성공");
 			url = "Ptevaldetail.jsp";
 
 		} catch (Exception s) {
@@ -596,6 +618,7 @@ public class WorkmanFrontController extends HttpServlet {
 
 				WorkmanService.deletePTEval(texteval);
 				request.getSession().setAttribute("Ptevalall", WorkmanService.getAllPTEval());
+				log.info("평가글 삭제 성공");
 				url = "Ptevalall.jsp";
 
 			} else {

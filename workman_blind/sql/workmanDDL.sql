@@ -38,7 +38,7 @@ CREATE TABLE parttimeeval (
        user_id      		VARCHAR2(50) NOT NULL,
        company_name			VARCHAR2(50) NOT NULL,
        pros_cons     		VARCHAR2(50) NOT NULL,
-       hourly_wage   		Number(10) NOT NULL,
+       wage   				Number(10) NOT NULL,
        environment          VARCHAR2(50) NOT NULL,
        incline        		VARCHAR2(50) NOT NULL,
        work_dif   			VARCHAR2(50) NOT NULL,

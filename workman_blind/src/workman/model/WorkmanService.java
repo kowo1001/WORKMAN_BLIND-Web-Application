@@ -13,240 +13,252 @@ import workman.model.dto.ParttimeList;
 
 public class WorkmanService {
 
-	// company
+   // company
 
-	public static boolean addCompany(String companyname, String companystory, String companyloc, String companynum)
-			throws MessageException, SQLException {
+   public static boolean addCompany(String companyname, String companystory, String companyloc, String companynum)
+         throws MessageException, SQLException {
 
-		return CompanyDAO.addCompany(companyname, companystory, companyloc, companynum);
-	}
+      return CompanyDAO.addCompany(companyname, companystory, companyloc, companynum);
+   }
 
-	public static boolean updateCompanyNum(String companyname, String companynum)
-			throws MessageException, SQLException {
+   public static boolean updateCompanyNum(String companyname, String companynum)
+         throws MessageException, SQLException {
 
-		return CompanyDAO.updateCompanyNum(companyname, companynum);
-	}
+      return CompanyDAO.updateCompanyNum(companyname, companynum);
+   }
 
-	public static boolean updateCompanyLoc(String companyname, String companyloc)
-			throws MessageException, SQLException {
+   public static boolean updateCompanyLoc(String companyname, String companyloc)
+         throws MessageException, SQLException {
 
-		return CompanyDAO.updateCompanyLoc(companyname, companyloc);
-	}
+      return CompanyDAO.updateCompanyLoc(companyname, companyloc);
+   }
 
-	public static boolean deleteCompany(String companyname) throws MessageException, SQLException {
+   public static boolean deleteCompany(String companyname) throws MessageException, SQLException {
 
-		return CompanyDAO.deleteCompany(companyname);
-	}
+      return CompanyDAO.deleteCompany(companyname);
+   }
 
-	public static Company getCompany(String companyname) throws SQLException, NotExistException {
+   public static Company getCompany(String companyname) throws SQLException, NotExistException {
 
-		Company company = CompanyDAO.getCompany(companyname);
+      Company company = CompanyDAO.getCompany(companyname);
 
-		if (company == null) {
+      if (company == null) {
 
-			throw new NotExistException("�빐�떦 �씠由꾩쓽 �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+         throw new NotExistException("해당 기업이 존재하지 않습니다");
 
-		}
-		return company;
-	}
+      }
+      return company;
+   }
 
-	public static ArrayList<Company> getAllCompany() throws SQLException, NotExistException {
+   public static ArrayList<Company> getAllCompany() throws SQLException, NotExistException {
 
-		ArrayList<Company> companies = CompanyDAO.getAllCompany();
+      ArrayList<Company> companies = CompanyDAO.getAllCompany();
 
-		if (companies == null) {
+      if (companies == null) {
 
-			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+         throw new NotExistException("해당 기업이 존재하지 않습니다");
 
-		}
-		return companies;
+      }
+      return companies;
 
-	}
+   }
 
-	// member
+   // member
 
-	public static boolean addMember(String userid, String userpw, String username, String useremail)
-			throws MessageException, SQLException {
+   public static boolean addMember(String userid, String userpw, String username, String useremail)
+         throws MessageException, SQLException {
 
-		return MemberDAO.addMember(userid, userpw, username, useremail);
-	}
+      return MemberDAO.addMember(userid, userpw, username, useremail);
+   }
 
-	public static boolean updateMemberPW(String userid, String userpw) throws MessageException, SQLException {
+   public static boolean updateMemberPW(String userid, String userpw) throws MessageException, SQLException {
 
-		return MemberDAO.updateMemberPw(userid, userpw);
-	}
+      return MemberDAO.updateMemberPw(userid, userpw);
+   }
 
-	public static boolean updateMemberName(String userid, String username) throws MessageException, SQLException {
+   public static boolean updateMemberName(String userid, String username) throws MessageException, SQLException {
 
-		return MemberDAO.updateMemberName(userid, username);
-	}
+      return MemberDAO.updateMemberName(userid, username);
+   }
 
-	public static boolean updateMemberEmail(String userid, String useremail) throws MessageException, SQLException {
+   public static boolean updateMemberEmail(String userid, String useremail) throws MessageException, SQLException {
 
-		return MemberDAO.updateMemberEmail(userid, useremail);
-	}
+      return MemberDAO.updateMemberEmail(userid, useremail);
+   }
 
-	public static boolean deleteMember(String userid) throws MessageException, SQLException {
+   public static boolean deleteMember(String userid) throws MessageException, SQLException {
 
-		return MemberDAO.deleteMember(userid);
-	}
+      return MemberDAO.deleteMember(userid);
+   }
 
-	public static Member getMember(String userid) throws SQLException, NotExistException {
+   public static Member getMember(String userid) throws SQLException, NotExistException {
 
-		Member member = MemberDAO.getMember(userid);
+      Member member = MemberDAO.getMember(userid);
 
-		if (member == null) {
+      if (member == null) {
 
-			throw new NotExistException("�빐�떦 Id�쓽 �쉶�썝 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+         throw new NotExistException("해당 ID의 회원이 존재하지 않습니다.");
 
-		}
-		return member;
-	}
+      }
+      return member;
+   }
+   
+   public static Member LoginMember(String userid, String userpw) throws SQLException, NotExistException {
 
-	public static ArrayList<Member> getAllMember() throws SQLException, NotExistException {
+      Member member = MemberDAO.LoginMember(userid, userpw);
 
-		ArrayList<Member> members = MemberDAO.getAllMember();
+      if (member == null) {
 
-		if (members == null) {
+         throw new NotExistException("해당 ID의 회원이 존재하지 않습니다. 로그인 실패");
 
-			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+      }
+      return member;
+   }
 
-		}
-		return members;
+   public static ArrayList<Member> getAllMember() throws SQLException, NotExistException {
 
-	}
+      ArrayList<Member> members = MemberDAO.getAllMember();
 
-	// parttimelist // todo
+      if (members == null) {
 
-	public static boolean addPTList(int reviewnum, int reviewscore, String recruitstatus, String date, String empperiod)
-			throws MessageException, SQLException {
+         throw new NotExistException("회원 정보가 존재하지 않습니다.");
 
-		return ParttimelistDAO.addPTList(reviewnum, reviewscore, recruitstatus, date, empperiod);
-	}
+      }
+      return members;
 
-	public static boolean updatePTListRecruitstat(Long textlist, String recruitstatus)
-			throws MessageException, SQLException {
+   }
 
-		return ParttimelistDAO.updatePTListRecruitstat(textlist, recruitstatus);
-	}
+   // parttimelist // todo
 
-	public static boolean updatePTListEmpPeriod(Long textlist, String empperiod) throws MessageException, SQLException {
+   public static boolean addPTList(int reviewnum, int reviewscore, String recruitstatus, String date, String empperiod)
+         throws MessageException, SQLException {
 
-		return ParttimelistDAO.updatePTListEmpPeriod(textlist, empperiod);
-	}
+      return ParttimelistDAO.addPTList(reviewnum, reviewscore, recruitstatus, date, empperiod);
+   }
 
-	public static boolean updatePTListReviewScore(Long textlist, int reviewscore)
-			throws MessageException, SQLException {
+   public static boolean updatePTListRecruitstat(Long textlist, String recruitstatus)
+         throws MessageException, SQLException {
 
-		return ParttimelistDAO.updatePTListReviewScore(textlist, reviewscore);
-	}
+      return ParttimelistDAO.updatePTListRecruitstat(textlist, recruitstatus);
+   }
 
-	public static boolean updatePTListCompanyName(Long textlist, Company companyname)
-			throws MessageException, SQLException {
+   public static boolean updatePTListEmpPeriod(Long textlist, String empperiod) throws MessageException, SQLException {
 
-		return ParttimelistDAO.updatePTListCompanyName(textlist, companyname);
-	}
+      return ParttimelistDAO.updatePTListEmpPeriod(textlist, empperiod);
+   }
 
-	public static boolean updatePTListDate(Long textlist, String date) throws MessageException, SQLException {
+   public static boolean updatePTListReviewScore(Long textlist, int reviewscore)
+         throws MessageException, SQLException {
 
-		return ParttimelistDAO.updatePTListDate(textlist, date);
-	}
+      return ParttimelistDAO.updatePTListReviewScore(textlist, reviewscore);
+   }
 
-	public static boolean deletePTList(Long textlist) throws MessageException, SQLException {
+   public static boolean updatePTListCompanyName(Long textlist, Company companyname)
+         throws MessageException, SQLException {
 
-		return ParttimelistDAO.deletePTList(textlist);
-	}
+      return ParttimelistDAO.updatePTListCompanyName(textlist, companyname);
+   }
 
-	public static ParttimeList getPTList(Long textlist) throws SQLException, NotExistException {
+   public static boolean updatePTListDate(Long textlist, String date) throws MessageException, SQLException {
 
-		ParttimeList ptlist = ParttimelistDAO.getPTList(textlist);
+      return ParttimelistDAO.updatePTListDate(textlist, date);
+   }
 
-		if (ptlist == null) {
+   public static boolean deletePTList(Long textlist) throws MessageException, SQLException {
 
-			throw new NotExistException("�빐�떦 Id�쓽 �쉶�썝 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+      return ParttimelistDAO.deletePTList(textlist);
+   }
 
-		}
-		return ptlist;
-	}
+   public static ParttimeList getPTList(Long textlist) throws SQLException, NotExistException {
 
-	public static ArrayList<ParttimeList> getAllPTList() throws SQLException, NotExistException {
+      ParttimeList ptlist = ParttimelistDAO.getPTList(textlist);
 
-		ArrayList<ParttimeList> ptlists = ParttimelistDAO.getAllPTList();
+      if (ptlist == null) {
 
-		if (ptlists == null) {
+         throw new NotExistException("알바가 존재하지 않습니다");
 
-			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+      }
+      return ptlist;
+   }
 
-		}
-		return ptlists;
+   public static ArrayList<ParttimeList> getAllPTList() throws SQLException, NotExistException {
 
-	}
+      ArrayList<ParttimeList> ptlists = ParttimelistDAO.getAllPTList();
 
-	// parttimeeval
+      if (ptlists == null) {
 
-	public static boolean addPTEval(String proscons, long wage, String environment, String incline,
-			String workdif, String experience) throws MessageException, SQLException {
+         throw new NotExistException("알바가 존재하지 않습니다");
 
-		return ParttimeEvalDAO.addPTEval(proscons, wage, environment, incline, workdif, experience);
-	}
+      }
+      return ptlists;
 
-	public static boolean updatePTEvalProCon(Long texteval, String proscons) throws MessageException, SQLException {
+   }
 
-		return ParttimeEvalDAO.updatePTEvalProCon(texteval, proscons);
-	}
+   // parttimeeval
 
-	public static boolean updatePTEvalWage(Long texteval, Long wage) throws MessageException, SQLException {
+   public static boolean addPTEval(String proscons, long wage, String environment, String incline,
+         String workdif, String experience) throws MessageException, SQLException {
 
-		return ParttimeEvalDAO.updatePTEvalWage(texteval, wage);
-	}
+      return ParttimeEvalDAO.addPTEval(proscons, wage, environment, incline, workdif, experience);
+   }
 
-	public static boolean updatePTEvalEnv(Long texteval, String environment) throws MessageException, SQLException {
+   public static boolean updatePTEvalProCon(Long texteval, String proscons) throws MessageException, SQLException {
 
-		return ParttimeEvalDAO.updatePTEvalEnv(texteval, environment);
-	}
+      return ParttimeEvalDAO.updatePTEvalProCon(texteval, proscons);
+   }
 
-	public static boolean updatePTEvalInc(Long texteval, String incline) throws MessageException, SQLException {
+   public static boolean updatePTEvalWage(Long texteval, Long wage) throws MessageException, SQLException {
 
-		return ParttimeEvalDAO.updatePTEvalInc(texteval, incline);
-	}
+      return ParttimeEvalDAO.updatePTEvalWage(texteval, wage);
+   }
 
-	public static boolean updatePTEvalWorkDif(Long texteval, String workdif) throws MessageException, SQLException {
+   public static boolean updatePTEvalEnv(Long texteval, String environment) throws MessageException, SQLException {
 
-		return ParttimeEvalDAO.updatePTEvalWorkDif(texteval, workdif);
-	}
+      return ParttimeEvalDAO.updatePTEvalEnv(texteval, environment);
+   }
 
-	public static boolean updatePTEvalExp(Long texteval, String experience) throws MessageException, SQLException {
+   public static boolean updatePTEvalInc(Long texteval, String incline) throws MessageException, SQLException {
 
-		return ParttimeEvalDAO.updatePTEvalExp(texteval, experience);
-	}
+      return ParttimeEvalDAO.updatePTEvalInc(texteval, incline);
+   }
 
-	public static boolean deletePTEval(Long texteval) throws MessageException, SQLException {
+   public static boolean updatePTEvalWorkDif(Long texteval, String workdif) throws MessageException, SQLException {
 
-		return ParttimeEvalDAO.deletePTEval(texteval);
-	}
+      return ParttimeEvalDAO.updatePTEvalWorkDif(texteval, workdif);
+   }
 
-	public static ParttimeEval getPTEval(Long texteval) throws SQLException, NotExistException {
+   public static boolean updatePTEvalExp(Long texteval, String experience) throws MessageException, SQLException {
 
-		ParttimeEval pteval = ParttimeEvalDAO.getPTEval(texteval);
+      return ParttimeEvalDAO.updatePTEvalExp(texteval, experience);
+   }
 
-		if (pteval == null) {
+   public static boolean deletePTEval(Long texteval) throws MessageException, SQLException {
 
-			throw new NotExistException("�빐�떦 Id�쓽 �쉶�썝 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+      return ParttimeEvalDAO.deletePTEval(texteval);
+   }
 
-		}
-		return pteval;
-	}
+   public static ParttimeEval getPTEval(Long texteval) throws SQLException, NotExistException {
 
-	public static ArrayList<ParttimeEval> getAllPTEval() throws SQLException, NotExistException {
+      ParttimeEval pteval = ParttimeEvalDAO.getPTEval(texteval);
 
-		ArrayList<ParttimeEval> ptevals = ParttimeEvalDAO.getAllPTEval();
+      if (pteval == null) {
 
-		if (ptevals == null) {
+         throw new NotExistException("알바 평가 게시글이 존재하지 않습니다");
 
-			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+      }
+      return pteval;
+   }
 
-		}
-		return ptevals;
+   public static ArrayList<ParttimeEval> getAllPTEval() throws SQLException, NotExistException {
 
-	}
+      ArrayList<ParttimeEval> ptevals = ParttimeEvalDAO.getAllPTEval();
+
+      if (ptevals == null) {
+
+         throw new NotExistException("알바 평가 게시글이 존재하지 않습니다");
+
+      }
+      return ptevals;
+
+   }
 }

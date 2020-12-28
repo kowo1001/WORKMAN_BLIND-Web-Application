@@ -294,7 +294,10 @@
                </tbody>
             </table>
          </div>
+         	<div class="writebox"><input type="submit" class="searchBtn" title="글 작성" value="글 작성"></div>
          </form>
+         
+   		
    
          <!-- 페이징 -->
          <script type="text/javascript">getPagingJob(1, 208662, 20, 10, "");</script><div class="pagenation img img4">
