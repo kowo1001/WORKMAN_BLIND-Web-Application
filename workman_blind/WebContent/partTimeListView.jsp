@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>알바리스트</title>
-<link href="${pageContext.request.contextPath}/css/listview.css?v=3" rel="stylesheet" type="listview/css">
+<link href="${pageContext.request.contextPath}/css/listview.css" rel="stylesheet">
 </head>
 
 <body>

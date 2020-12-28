@@ -48,7 +48,7 @@ CREATE TABLE parttimeeval (
 CREATE TABLE company (
 	company_name		VARCHAR2(50)	PRIMARY KEY,
 	company_story		VARCHAR2(4000)	NOT NULL,
-	company_loc			VARCHAR2(50)	NOT NULL,
+	company_loc			VARCHAR2(100)	NOT NULL,
 	company_num			VARCHAR2(50)	NOT NULL
 );
 
