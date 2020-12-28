@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+
+#Container {
+    width: 1070px;
+    margin: 0 auto;
+}
+
+#Location {
+    margin-bottom: 0;
+    border-bottom: 0 none;
+}
+
+#Location {
+    position: relative;
+    height: 24px;
+    margin: 0 0 20px;
+    padding: 18px 0 0 0;
+    color: #545455;
+    border-bottom: 1px solid #ececec;
+}
+
+body#ReputeList .head {
+    margin-bottom: 10px;
+}
+
+script {
+    display: none;
+}
+
+.repute-select {
+    overflow: hidden;
+    position: relative;
+    width: 1070px;
+    margin: 55px 0 0;
+}
+
+.repute-select__h2 {
+    margin: 0 0 15px;
+    padding-left: 12px;
+    font-size: 26px;
+    letter-spacing: -0.1em;
+    color: #333;
+}
+
+.repute-select__list {
+    width: 2004px;
+    height: 80px;
+    padding: 0 34px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.repute-select__list>li {
+    float: left;
+    width: 167px;
+    height: 80px;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: center;
+    background-color: #fff;
+}
+
+.repute-select__list>li.on a {
+    height: 63px;
+    font-weight: bold;
+    border-bottom: 3px solid #195cc4;
+}
+
+.repute-select__list>li a {
+    display: block;
+    height: 66px;
+    padding-top: 14px;
+    text-decoration: none;
+}
+
+.repute-select__list {
+    width: 2004px;
+    height: 80px;
+    padding: 0 34px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #222;
+}
+
+.repute-select-prev>span {
+    background-position: -134px 0;
+}
+
+.repute-select-btn>span {
+    display: inline-block;
+    width: 10px;
+    height: 17px;
+    background: url(//image.alba.kr/story/repute1.png) no-repeat;
+}
+
+form {
+    margin: 0;
+}
+
+.reputeList .searchBox {
+    height: auto;
+    padding: 35px 0 10px;
+}
+
+.searchBox {
+    height: 20px;
+    padding: 0 0 15px;
+    text-align: right;
+}
+
+.reputeList .searchBox>input[type="text"] {
+    width: 165px;
+    height: 27px;
+    padding: 0 5px;
+    margin: 0;
+    line-height: 27px;
+    border: 1px solid #bbb;
+    border-right: 0 none;
+}
+
+.reputeList .searchBox>input {
+    vertical-align: middle;
+}
+
+.formList {
+    position: relative;
+    border-top: 1px solid #5c5c5c;
+    width: 100%;
+}
+
+
+.listTop {
+	position: absolute;
+    top: -32px;
+}
+
+.listTop p.total {
+    padding: 0 0 0 20px;
+}
+
+.formList table {
+    table-layout: fixed;
+    width: 100%;
+    /* *border-collapse: collapse; */
+    border-spacing: 0;
+    border-bottom: 1px solid #dadada;
+}
+
+iframe.hideFrame, caption, legend, .hide {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: -999em;
+    left: -999em;
+}
+
+caption {
+    display: table-caption;
+    text-align: -webkit-center;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+
+
+
+
+
+
+

@@ -29,7 +29,7 @@ import lombok.Setter;
 
 @Entity
 public class Company {
-	
+
 	@Id
 	@Column(name = "company_name")
 	private String companyname;
