@@ -8,7 +8,7 @@ public class PublicCommon {
 	private static EntityManagerFactory emf;
 
 	static {
-		emf = Persistence.createEntityManagerFactory("step10_step02Test_s");
+		emf = Persistence.createEntityManagerFactory("workman_blind");
 	}
 
 	public static EntityManager getEntityManager() {
