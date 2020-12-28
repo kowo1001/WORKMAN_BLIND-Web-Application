@@ -24,9 +24,9 @@ public class WorkmanFrontController extends HttpServlet {
 
 		request.setCharacterEncoding("utf-8");
 		String command = request.getParameter("command");
-		System.out.println(command);
+		
 		if (command != null) {
-
+			
 			if (command.equals("CompanyAll")) {
 				CompanyAll(request, response);
 
@@ -62,9 +62,6 @@ public class WorkmanFrontController extends HttpServlet {
 
 			} else if (command.equals("MemberDelete")) {
 				MemberDelete(request, response);
-
-			} else if (command.equals("MemberLogin")) {
-				MemberLogin(request, response);
 
 			} else if (command.equals("PtListAll")) {
 				PTListAll(request, response);
@@ -157,7 +154,7 @@ public class WorkmanFrontController extends HttpServlet {
 		String num = request.getParameter("Companynum");
 
 		try {
-
+			
 			if (name != null && name.length() != 0) {
 
 				request.getSession().setAttribute("successMsg", "등록 완료");
@@ -276,7 +273,7 @@ public class WorkmanFrontController extends HttpServlet {
 	protected void MemberInsert(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String url = "errorMsg.jsp";
+		String url = "showError.jsp";
 
 		String id = request.getParameter("Userid");
 		String pw = request.getParameter("Userpw");
@@ -284,7 +281,7 @@ public class WorkmanFrontController extends HttpServlet {
 		String email = request.getParameter("Useremail");
 
 		try {
-
+			
 			if (id != null && id.length() != 0) {
 
 				request.getSession().setAttribute("successMsg", "등록 완료");
@@ -363,24 +360,6 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	
-	public void MemberLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		String url = "errorMsg.jsp";
-
-		try {
-
-			request.getSession().setAttribute("Member", WorkmanService.LoginMember(request.getParameter("id"), request.getParameter("pw")));
-			url = "loginSuccess.jsp";
-
-		} catch (Exception s) {
-
-			request.setAttribute("errorMsg", s.getMessage());
-			log.info("회원 로그인 에러 발생");
-		}
-		request.getRequestDispatcher(url).forward(request, response);
-	}
-	
 	public void PTListAll(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
