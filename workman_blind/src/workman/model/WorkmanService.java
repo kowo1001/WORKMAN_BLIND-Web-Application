@@ -97,7 +97,19 @@ public class WorkmanService {
 
 		if (member == null) {
 
-			throw new NotExistException("�빐�떦 Id�쓽 �쉶�썝 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+			throw new NotExistException("해당 ID의 회원이 존재하지 않습니다.");
+
+		}
+		return member;
+	}
+	
+	public static Member LoginMember(String userid, String userpw) throws SQLException, NotExistException {
+
+		Member member = MemberDAO.LoginMember(userid, userpw);
+
+		if (member == null) {
+
+			throw new NotExistException("해당 ID의 회원이 존재하지 않습니다. 로그인 실패");
 
 		}
 		return member;
@@ -109,7 +121,7 @@ public class WorkmanService {
 
 		if (members == null) {
 
-			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+			throw new NotExistException("회원 정보가 존재하지 않습니다.");
 
 		}
 		return members;
@@ -163,7 +175,7 @@ public class WorkmanService {
 
 		if (ptlist == null) {
 
-			throw new NotExistException("�빐�떦 Id�쓽 �쉶�썝 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+			throw new NotExistException("알바가 존재하지 않습니다");
 
 		}
 		return ptlist;
@@ -175,7 +187,7 @@ public class WorkmanService {
 
 		if (ptlists == null) {
 
-			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+			throw new NotExistException("알바가 존재하지 않습니다");
 
 		}
 		return ptlists;
