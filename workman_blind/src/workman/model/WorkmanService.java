@@ -44,7 +44,7 @@ public class WorkmanService {
 
 		if (company == null) {
 
-			throw new NotExistException("�빐�떦 �씠由꾩쓽 �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+			throw new NotExistException("해당 기업이 존재하지 않습니다");
 
 		}
 		return company;
@@ -56,7 +56,7 @@ public class WorkmanService {
 
 		if (companies == null) {
 
-			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+			throw new NotExistException("해당 기업이 존재하지 않습니다");
 
 		}
 		return companies;
@@ -231,7 +231,7 @@ public class WorkmanService {
 
 		if (pteval == null) {
 
-			throw new NotExistException("�빐�떦 Id�쓽 �쉶�썝 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+			throw new NotExistException("알바 평가 게시글이 존재하지 않습니다");
 
 		}
 		return pteval;
@@ -243,7 +243,7 @@ public class WorkmanService {
 
 		if (ptevals == null) {
 
-			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
+			throw new NotExistException("알바 평가 게시글이 존재하지 않습니다");
 
 		}
 		return ptevals;
