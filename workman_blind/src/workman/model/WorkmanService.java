@@ -1,6 +1,7 @@
 package workman.model;
 
 import java.sql.SQLException;
+
 import java.util.ArrayList;
 
 import workman.exception.MessageException;
@@ -43,7 +44,7 @@ public class WorkmanService {
 
 		if (company == null) {
 
-			throw new NotExistException("해당 이름의 회사 정보가 존재하지 않습니다.");
+			throw new NotExistException("�빐�떦 �씠由꾩쓽 �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
 
 		}
 		return company;
@@ -55,7 +56,7 @@ public class WorkmanService {
 
 		if (companies == null) {
 
-			throw new NotExistException("전체 회사 정보가 존재하지 않습니다.");
+			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
 
 		}
 		return companies;
@@ -96,7 +97,7 @@ public class WorkmanService {
 
 		if (member == null) {
 
-			throw new NotExistException("해당 Id의 회원 정보가 존재하지 않습니다.");
+			throw new NotExistException("�빐�떦 Id�쓽 �쉶�썝 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
 
 		}
 		return member;
@@ -108,7 +109,7 @@ public class WorkmanService {
 
 		if (members == null) {
 
-			throw new NotExistException("전체 회사 정보가 존재하지 않습니다.");
+			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
 
 		}
 		return members;
@@ -162,7 +163,7 @@ public class WorkmanService {
 
 		if (ptlist == null) {
 
-			throw new NotExistException("해당 Id의 회원 정보가 존재하지 않습니다.");
+			throw new NotExistException("�빐�떦 Id�쓽 �쉶�썝 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
 
 		}
 		return ptlist;
@@ -174,7 +175,7 @@ public class WorkmanService {
 
 		if (ptlists == null) {
 
-			throw new NotExistException("전체 회사 정보가 존재하지 않습니다.");
+			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
 
 		}
 		return ptlists;
@@ -230,7 +231,7 @@ public class WorkmanService {
 
 		if (pteval == null) {
 
-			throw new NotExistException("해당 Id의 회원 정보가 존재하지 않습니다.");
+			throw new NotExistException("�빐�떦 Id�쓽 �쉶�썝 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
 
 		}
 		return pteval;
@@ -242,7 +243,7 @@ public class WorkmanService {
 
 		if (ptevals == null) {
 
-			throw new NotExistException("전체 회사 정보가 존재하지 않습니다.");
+			throw new NotExistException("�쟾泥� �쉶�궗 �젙蹂닿� 議댁옱�븯吏� �븡�뒿�땲�떎.");
 
 		}
 		return ptevals;
