@@ -115,13 +115,12 @@ public class WorkmanService {
 
 	}
 
-	// parttimelist
+	// parttimelist // todo
 
-	public static boolean addPTList(Long textlist, Member member, Company company, int reviewnum, int reviewscore,
-			String recruitstatus, String date, String emp_period) throws MessageException, SQLException {
+	public static boolean addPTList(int reviewnum, int reviewscore, String recruitstatus, String date, String empperiod)
+			throws MessageException, SQLException {
 
-		return ParttimelistDAO.addPTList(textlist, member, company, reviewnum, reviewscore, recruitstatus, date,
-				emp_period);
+		return ParttimelistDAO.addPTList(reviewnum, reviewscore, recruitstatus, date, empperiod);
 	}
 
 	public static boolean updatePTListRecruitstat(Long textlist, String recruitstatus)
@@ -184,53 +183,47 @@ public class WorkmanService {
 
 	// parttimeeval
 
-	public static boolean addPTEval(String proscons, long hourlywage, String environment, String incline,
+	public static boolean addPTEval(String proscons, long wage, String environment, String incline,
 			String workdif, String experience) throws MessageException, SQLException {
 
-		return ParttimeEvalDAO.addPTEval(proscons, hourlywage, environment, incline, workdif, experience);
+		return ParttimeEvalDAO.addPTEval(proscons, wage, environment, incline, workdif, experience);
 	}
-	
-	public static boolean updatePTEvalProCon(Long texteval, String proscons)
-			throws MessageException, SQLException {
+
+	public static boolean updatePTEvalProCon(Long texteval, String proscons) throws MessageException, SQLException {
 
 		return ParttimeEvalDAO.updatePTEvalProCon(texteval, proscons);
 	}
-	
-	public static boolean updatePTEvalWage(Long texteval, Long hourlywage)
-			throws MessageException, SQLException {
 
-		return ParttimeEvalDAO.updatePTEvalWage(texteval, hourlywage);
+	public static boolean updatePTEvalWage(Long texteval, Long wage) throws MessageException, SQLException {
+
+		return ParttimeEvalDAO.updatePTEvalWage(texteval, wage);
 	}
-	
-	public static boolean updatePTEvalEnv(Long texteval, String environment)
-			throws MessageException, SQLException {
+
+	public static boolean updatePTEvalEnv(Long texteval, String environment) throws MessageException, SQLException {
 
 		return ParttimeEvalDAO.updatePTEvalEnv(texteval, environment);
 	}
-	
-	public static boolean updatePTEvalInc(Long texteval, String incline)
-			throws MessageException, SQLException {
+
+	public static boolean updatePTEvalInc(Long texteval, String incline) throws MessageException, SQLException {
 
 		return ParttimeEvalDAO.updatePTEvalInc(texteval, incline);
 	}
-	
-	public static boolean updatePTEvalWorkDif(Long texteval, String workdif)
-			throws MessageException, SQLException {
+
+	public static boolean updatePTEvalWorkDif(Long texteval, String workdif) throws MessageException, SQLException {
 
 		return ParttimeEvalDAO.updatePTEvalWorkDif(texteval, workdif);
 	}
-	
-	public static boolean updatePTEvalExp(Long texteval, String experience)
-			throws MessageException, SQLException {
+
+	public static boolean updatePTEvalExp(Long texteval, String experience) throws MessageException, SQLException {
 
 		return ParttimeEvalDAO.updatePTEvalExp(texteval, experience);
 	}
-	
+
 	public static boolean deletePTEval(Long texteval) throws MessageException, SQLException {
 
 		return ParttimeEvalDAO.deletePTEval(texteval);
 	}
-	
+
 	public static ParttimeEval getPTEval(Long texteval) throws SQLException, NotExistException {
 
 		ParttimeEval pteval = ParttimeEvalDAO.getPTEval(texteval);
@@ -242,7 +235,7 @@ public class WorkmanService {
 		}
 		return pteval;
 	}
-	
+
 	public static ArrayList<ParttimeEval> getAllPTEval() throws SQLException, NotExistException {
 
 		ArrayList<ParttimeEval> ptevals = ParttimeEvalDAO.getAllPTEval();
