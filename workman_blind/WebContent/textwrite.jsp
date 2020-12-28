@@ -35,6 +35,18 @@
 		<input type="hidden" name="command" value="PtEvalInsert">
 		<table border="1">
 			<tr>
+				<td>${sessionScope.ParttimeEval.texteval}</td>
+			</tr>
+			<tr>
+				<td>${sessionScope.ParttimeList.textlist}</td>
+			</tr>
+			<tr>
+				<td>${sessionScope.Member.userid}</td>
+			</tr>
+			<tr>
+				<td>${sessionScope.Company.companyname}</td>
+			</tr>
+			<tr>
 				<td>장단점</td><td><input type="text" name="Proscons"></td>
 			</tr>
 			<tr>
