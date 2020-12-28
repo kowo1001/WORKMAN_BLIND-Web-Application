@@ -34,7 +34,7 @@ CREATE TABLE parttimelist (
 
 CREATE TABLE parttimeeval (
 	   text_eval            NUMBER(10) PRIMARY KEY,
-       text_list            VARCHAR2(50) NOT NULL,
+       text_list            NUMBER(10) NOT NULL,
        user_id      		VARCHAR2(50) NOT NULL,
        company_name			VARCHAR2(50) NOT NULL,
        pros_cons     		VARCHAR2(50) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE parttimeeval (
 );
 
 CREATE TABLE company (
-	company_name		VARCHAR2(50)	NOT NULL,
+	company_name		VARCHAR2(50)	PRIMARY KEY,
 	company_story		VARCHAR2(4000)	NOT NULL,
 	company_loc			VARCHAR2(50)	NOT NULL,
 	company_num			VARCHAR2(50)	NOT NULL
