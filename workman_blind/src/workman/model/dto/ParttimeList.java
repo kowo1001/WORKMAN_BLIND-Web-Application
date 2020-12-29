@@ -36,18 +36,14 @@ public class ParttimeList {
 	@Column(name="text_list")
 	private Long textlist;
 	
+	@ManyToOne
+	@JoinColumn(name="company_name")
+	private Company companyname;
+
 	@OneToMany
 	@JoinColumn(name="user_id")
 	private List<Member> userid;
 
-	@ManyToOne
-	@JoinColumn(name="company_name")
-	private Company companyname;
-	
-	@ManyToOne
-	@JoinColumn(name="user_id")
-	private Member userid;
-	
 	@Column(name="review_num")
 	private int reviewnum;
 	
