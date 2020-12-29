@@ -22,7 +22,7 @@ import lombok.Setter;
 
 @Entity
 public class Company {
-	
+
 	@Id
 	@Column(name = "company_name")
 	private String companyname;
@@ -40,7 +40,7 @@ public class Company {
 	private List<Member> members;
 	
 	@OneToMany(mappedBy = "companyname")
-	private List<Parttimelist> parttimelists;
+	private List<ParttimeList> parttimelists;
 	
 	@OneToMany(mappedBy = "companyname")
 	private List<Parttimeeval> parttimeevals;

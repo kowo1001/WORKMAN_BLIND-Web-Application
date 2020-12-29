@@ -13,18 +13,13 @@ CREATE TABLE parttimeeval (
 ); */
 package workman.model.dto;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 
 import lombok.AllArgsConstructor;
@@ -43,7 +38,7 @@ import lombok.Setter;
 
 
 @Entity
-public class Parttimeeval {
+public class ParttimeEval {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "parteval_seq_gen")
@@ -51,8 +46,8 @@ public class Parttimeeval {
 	private long texteval;
 	
 	@ManyToOne
-	@Column(name = "text_list")
-	private Parttimelist textlist;
+	@JoinColumn(name = "text_list")
+	private ParttimeList textlist;
 	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
@@ -65,8 +60,8 @@ public class Parttimeeval {
 	@Column(name = "pros_cons")
 	private String proscons;
 
-	@Column(name = "hourly_wage")
-	private long hourlywage;
+	@Column(name = "wage")
+	private long wage;
 	
 	@Column(name = "environment")
 	private String environment;
@@ -79,5 +74,24 @@ public class Parttimeeval {
 	
 	@Column(name = "experience")
 	private String experience;
+	
+	
+	public static ParttimeEval createParttimeEval(Long texteval,ParttimeList textlist,Member userid,Company companyname,String proscons,Long wage,String environment,String incline,String workdif,String experience) {
+		ParttimeEval pteval = new ParttimeEval();
+		
+		pteval.texteval = texteval;
+		pteval.textlist = textlist;
+		pteval.userid = userid;
+		pteval.companyname = companyname;
+		pteval.proscons = proscons;
+		pteval.wage = wage;
+		pteval.environment = environment;
+		pteval.incline = incline;
+		pteval.workdif = workdif;
+		pteval.experience = experience;
+		return pteval;
+	}
+	
+	
 
 }

@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+header{
+    background: yellow;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* header nav {
+
+} */
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+    margin: 10px;
+}   
+
+main {
+    display: flex;    
+}
+
+section {
+    width: 70%;
+    background: yellow;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: right; 
+}
+
+ 
+section div {
+    text-align: right;
+}
+
+/* section h1 {
+    
+} */
+
+article {
+    background: yellow;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.reputeDetailCompany-name {
+	position: relative;
+	float: left;
+	width: 768px;
+	height: 71px;
+	padding-left: 172px;
+	background-color: #464a56
+}
+
+
+.reputeDetailCompany-name.textarea {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 71px;
+	color: #fff;
+	font-family: 'Malgun Gothic';
+	letter-spacing: -1px;
+}
+
+.reputeDetailCompany-state {
+	background-color:"blue";
+	float: right;
+	width: 126px;
+	height: 71px;
+	font-size: 16px;
+	line-height: 71px;
+	text-align: center;
+	color: white;
+}
+
+.reputeDetailList-list-head {
+	overflow: hidden;
+	width: 1010px;
+	margin: 0 0 20px;
+	padding: 15px 30px;
+	background-color: #f8f8f8;
+}
+
+.reputeDetailList-list>li {
+	position: relative;
+	padding: 0 0 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.reputeDetailList-list-dl>dd>em.positive {
+	background-color: #e9f4fc;
+	color: #185cc2;
+}
+
+.reputeDetailList-list-dl>dd>em.negative {
+	background-color: #f2f2f2; 
+	color: #888;
+}
+
+
+.reputeDetailList-list-dl>dd>em {
+	display: inline-block;
+	height: 30px;
+	margin: 0 5px 5px 0;
+	padding: 0 10px;
+	font-size: 16px;
+	line-height: 30px;
+}
+.reputeDetailList-list-ul {
+	float: right;
+	display: inline;
+	width: 180px;
+	margin-right: 28px;
+}
+.reputeDetailList-list-ul>.likecnt {
+	width: 95px;
+	height: 76px;
+	margin: 0 0 20px 85px;
+	padding: 10px 0 0;
+	text-align: center;
+	bacground: url(//image.alba.kr/story/repute1.png) no-repeat 0 -30px;
+}
+
+.reputeDetailList-list-ul>.likecnt>em {
+	display: block;
+	font-weight: bold;
+	font-size: 40px;
+	font-family: 'Malgun Gothic';
+	letter-spacing: -1px;
+	text-align: center;
+	color: #185cc2;
+}
+.reputeDetailList-list-ul>.likecnt>span {
+	display: inline-block;
+	height: 27px;
+	padding: 0 15px;
+	font-size: 14px;
+	line-height: 27px;
+	font-familly: 'Malgun Gothic';
+	color: #fff;
+	background-color: #185cc2;
+	border-radius: 13px;
+}
+
+
+em, address, i {
+	font-style: normal;
+}
+
+footer {
+    background: yellow;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* footer address {
+
+} */
+
+footer address a {
+    display: block;
+}
