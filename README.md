@@ -6,25 +6,35 @@
 
 ---
 
-> 팀원 : 장종욱, 권희성, 장문희
+> **팀원 : 장종욱, 권희성, 장문희**
+>> 
+:mag: 엑셀문서링크 https://docs.google.com/spreadsheets/d/19So7A99qJnlKGLl4MukpBJ5gDMmvVqs-dZwoCNEFR7c/edit#gid=0
+
+:mag: ERDCLOUD 링크 https://www.erdcloud.com/d/4FcQJ7HKsogLmDyL9
+
+:mag: 카카오 오븐 페이지 설계 https://ovenapp.io/project/VAWmAEwLwYoCOj8CLJ8i0hJKVkupt41v#f5ld6
 
 ---
 
-### WORKMAN_BLIND의 탄생과정
+### :star:WORKMAN_BLIND의 탄생과정:star:
 
-안녕하세요! 다들 돈을 모으기 위해 야심차게 새로운 아르바이트를 구해 출근했다가 일주일도 안되어, 3일도 안되어, 혹은 반나절만에 탈주한 경험이 있으실겁니다. (저만 그런건 아니겠지요..?)
+안녕하세요:smile: 
 
-이유는 다양할거예요~ 일이 너무 힘들어서, 동료 혹은 사장님의 성격이 최악이라, 진상손님이 많아서..
+다들 돈을 모으기 위해 야심차게 새로운 아르바이트를 구해 출근했다가 
 
-이럴때 '거기 알바자리 최악이래!' 하고 친구가 알려주었더라면 우리의 소중한 시간과 노동력을 세이-브 할수 있었을텐데 말이에요..
+일주일도 안되어, 3일도 안되어, 혹은 반나절만에 탈주한 경험이 있으실겁니다. (저만 그런건 아니겠지요..?:joy:)
+
+이유는 다양하겠죠! 일이 너무 힘들어서:weary:, 동료 혹은 사장님이 최악이라:scream:, 진상손님이 많아서:rage:..
+
+이럴때 '거기 알바자리 최악이래!:grimacing:' 하고 미리 친구가 알려주었더라면 우리의 소중한 시간과:clock4: 노동력을:muscle: 세이-브 할수 있었을텐데 말이에요..
 
 저희 **WORKMAN_BLIND**는 바로 이런 서러운 알바몬들의 고충을 해결하기위해 탄생하였답니다!
 
-아르바이트를 지원하기전에 미리 그 곳에서 근무해봤던 선배들의 후기를 **WORKMAN_BLIND**에서 빠르게 스캔한다음!
+아르바이트를 지원하기전에 미리 그 곳에서 근무해봤던 선배들의 후기를 **WORKMAN_BLIND**에서 빠르게 스캔한다음!:eyes:
 
-거를곳은 거르고! 꿀알바는 누구보다 빠르게 지원하고! 
+거를곳은 거르고!:no_good: 꿀알바는 누구보다 빠르게 지원하고!:ok_woman:
 
-우리의 신중한 초이스를 도와주는 멋진 친구가 되어드리겠습니다. 맡겨만 주세요!!
+우리의 신중한 초이스를 도와주는 멋진 친구:two_women_holding_hands:가 되어드리겠습니다. 맡겨만 주세요!!:punch::punch::punch:
 
 
 ---
@@ -114,8 +124,9 @@
 
 ### Structure
 
-![erd](https://user-images.githubusercontent.com/37354978/103251259-6b217980-49bb-11eb-8ab7-b5411f924ae9.png)
-
+<div>
+    <img width="800" src="/read/image/?mailSN=10689&attachIndex=2&contentType=image/png&offset=1383&size=243896&maxSize=200&mimeSN=1609182268.742215.29085.55040&u=janghee234">
+</div>
 
 ---
 
