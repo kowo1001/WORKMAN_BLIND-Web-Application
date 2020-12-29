@@ -37,12 +37,12 @@ public class ParttimeList {
 	private Long textlist;
 	
 	@ManyToOne
-	@JoinColumn(name="user_id")
-	private Member userid;
-	
-	@ManyToOne
 	@JoinColumn(name="company_name")
 	private Company companyname;
+	
+	@ManyToOne
+	@JoinColumn(name="user_id")
+	private Member userid;
 	
 	@Column(name="review_num")
 	private int reviewnum;
@@ -53,14 +53,11 @@ public class ParttimeList {
 	@Column(name="recruit_status")
 	private String recruitstatus;
 	
-	@Column(name="date")
+	@Column(name="regist_date")
 	private String date;
 	
 	@Column(name="emp_period")
 	private String empperiod;
 	
-	@OneToMany(mappedBy="textlist")
-	private List<ParttimeEval> parttimeevals; 
-
 }
 

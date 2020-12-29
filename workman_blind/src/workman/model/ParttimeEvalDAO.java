@@ -6,41 +6,43 @@ import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-import lombok.extern.slf4j.Slf4j;
+import workman.exception.NotExistException;
 import workman.model.dto.Company;
+import workman.model.dto.Member;
 import workman.model.dto.ParttimeEval;
+import workman.model.dto.ParttimeList;
 import workman.model.util.PublicCommon;
 
 public class ParttimeEvalDAO {
 
-	public static boolean addPTEval(String proscons, long wage, String environment, String incline, String workdif,
-			String experience) throws SQLException {
+	public static ParttimeEval addPTEval(Long texteval, ParttimeList pl, Member m, Company cn, String proscons, Long wage, String environment, String incline, String workdif,
+			String experience) throws SQLException, NotExistException {
 
 		EntityManager em = PublicCommon.getEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		tx.begin();
 		
-		boolean result = false;
-
 		try {
-			ParttimeEval pteval = ParttimeEval.builder().proscons(proscons).wage(wage)
+			ParttimeEval pteval = ParttimeEval.builder().texteval(texteval).textlist(pl).userid(m).companyname(cn).proscons(proscons).wage(wage)
 					.environment(environment).incline(incline).workdif(workdif).experience(experience).build();
-
-			em.persist(pteval);
-			tx.commit();
 			
-			result = true;
-
+			if (pteval != null) {
+				em.persist(pteval);
+				tx.commit();
+				
+				return pteval;
+			}
 		} catch (Exception e) {
 
 			tx.rollback();
+			e.printStackTrace();
 			
 		} finally {
 
 			em.close();
 
 		}
-		return result;
+		throw new NotExistException("해당 평가게시글이 존재하지 않습니다");
 	}
 
 	public static boolean updatePTEvalProCon(Long texteval, String proscons) throws SQLException {

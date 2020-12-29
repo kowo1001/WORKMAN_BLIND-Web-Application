@@ -35,16 +35,16 @@
 		<input type="hidden" name="command" value="PtEvalInsert">
 		<table border="1">
 			<tr>
-				<td>${sessionScope.ParttimeEval.texteval}</td>
+				<td>평가글번호</td><td><input type="text" name="Textval"></td>
 			</tr>
 			<tr>
-				<td>${sessionScope.ParttimeList.textlist}</td>
+				<td>글번호</td><td><input type="text" name="Textlist"></td>
 			</tr>
 			<tr>
-				<td>${sessionScope.Member.userid}</td>
+				<td>아이디</td><td><input type="text" name="Userid"></td>
 			</tr>
 			<tr>
-				<td>${sessionScope.Company.companyname}</td>
+				<td>기업명</td><td><input type="text" name="Companyname"></td>
 			</tr>
 			<tr>
 				<td>장단점</td><td><input type="text" name="Proscons"></td>

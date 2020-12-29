@@ -251,12 +251,11 @@ public class ParttimelistDAO {
 		ArrayList<ParttimeList> ptlist = null;
 
 		try {
-			ptlist = (ArrayList<ParttimeList>) em.createNativeQuery("select * from parttimelist", ParttimeList.class)
-					.getResultList();
-
-		} catch (Exception e) {
-
-			// log
+			ptlist = (ArrayList<ParttimeList>) em.createNativeQuery("select * from parttimelist", ParttimeList.class).getResultList();
+			System.out.println("===== " + ptlist);
+//		} catch (Exception e) {
+//
+//			// log
 
 		} finally {
 

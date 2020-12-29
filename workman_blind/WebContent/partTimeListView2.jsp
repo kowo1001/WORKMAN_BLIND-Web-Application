@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +16,8 @@
    <div id="Container">
       <!-- location -->
       <div id="Location">
-         <a href="/">홈</a> &gt; <a href="/story/">알바스토리</a> &gt; <strong>알바리뷰</strong>
+         <a href="/">홈</a> &gt; <strong>알바리뷰</strong>
+         <!-- <a href="/">홈</a> &gt; <a href="/story/">알바스토리</a> &gt; <strong>알바리뷰</strong> -->
       </div>
       <!-- //location -->
    
@@ -22,8 +26,12 @@
          
          <div class="heading albaRepute">
             
+            
          </div>
    
+
+      
+      
       
       </div>
       <!-- 스토리 헤딩 -->
@@ -127,10 +135,18 @@
       <td colspan="5" class="notice-tit"><a href="/story/albastory/Detail.asp?idx=2979"><strong>알바리뷰 작성 안내</strong></a></td>
    </tr> 나중에 -->
                   <!-- //공지사항 -->
-   
-                  <!-- 리뷰정보 기업리스트 -->
-                  
-   <tr>
+                  <!-- 리뷰정보 기업리스트 -->  
+   <c:forEach items="${sessionScope.Ptlistall}" var="parttimelist">
+	<tr>
+		<td class="cnt">${parttimelist.textlist}</td>
+		<td class="workcomnm"><a href="partTimeEvalView2.jsp">${parttimelist.companyname.companyname}</td>
+		<td class="repcnt"><span class="icon"></span> <span class="text">${parttimelist.reviewnum}</span></td>
+		<td class="repscore">${parttimelist.reviewscore}</td>
+		<td class="jobing">${parttimelist.recruitstatus}</td>
+		<td class="lastregymd">${parttimelist.date}</td>
+	</tr>
+   </c:forEach>
+   <!-- <tr>
       <td class="cnt">208662</td>
       <td class="workcomnm"><a href="/story/repute/ReputeDetail.asp?idx=216345">대나무향기</a></td>
       <td class="repcnt">1</td>
@@ -289,7 +305,7 @@
       <td class="repscore"><span class="icon"></span> <span class="text">6</span></td>
       <td class="jobing"></td>
       <td class="lastregymd">2시간전</td>
-   </tr>
+   </tr> -->
                   <!-- //리뷰정보 기업리스트 -->
                </tbody>
             </table>

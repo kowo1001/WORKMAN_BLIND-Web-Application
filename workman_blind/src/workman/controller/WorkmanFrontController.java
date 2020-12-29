@@ -1,6 +1,7 @@
 ﻿package workman.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,17 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import lombok.extern.slf4j.Slf4j;
 import workman.model.WorkmanService;
+import workman.model.dto.ParttimeEval;
+import workman.model.dto.ParttimeList;
 
 @Slf4j
 @WebServlet("/workman")
 public class WorkmanFrontController extends HttpServlet {
-
-	public WorkmanFrontController() {
-		super();
-	}
+	
+	static WorkmanService service = WorkmanService.getInstance();
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws ServletException, IOException {   
 
 		request.setCharacterEncoding("utf-8");
 		String command = request.getParameter("command");
@@ -373,17 +374,22 @@ public class WorkmanFrontController extends HttpServlet {
 
 	public void PTListAll(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+	
+		System.out.println("---------------------");
 
-		String url = "showError.jsp";
-
+//		String url = "errorMsg.jsp";
+//		String url = "partTimeListView2.jsp";
+		String url = "errorMsg.jsp";
 		try {
+			ArrayList<ParttimeList> data = WorkmanService.getAllPTList();
+			System.out.println(data);
 
-			request.getSession().setAttribute("Ptlistall", WorkmanService.getAllPTList());
+			request.getSession().setAttribute("Ptlistall", data);
 			log.info("모든  알바글 조회 성공");
-			url = "Ptlistall.jsp";
+			url = "partTimeListView2.jsp";
 
 		} catch (Exception s) {
-
+			s.printStackTrace();
 			request.setAttribute("errorMsg", s.getMessage());
 			log.info("모든  알바글 조회 에러 발생");
 
@@ -543,19 +549,22 @@ public class WorkmanFrontController extends HttpServlet {
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
-
+		
+		long texteval = Long.valueOf(request.getParameter("Testval"));
+		long textlist = Long.valueOf(request.getParameter("Textlist"));
+		String userid = request.getParameter("Userid");
+		String companyname = request.getParameter("Companyname");
 		String proscons = request.getParameter("Proscons");
 		long wage = Long.valueOf(request.getParameter("Wage"));
 		String environment = request.getParameter("Environment");
 		String incline = request.getParameter("Incline");
 		String workdif = request.getParameter("Workdif");
 		String experience = request.getParameter("Experience");
-
+		
 		try {
-
+			ParttimeEval parteval= service.addPTEval(texteval,textlist,userid,companyname,proscons,wage,environment,incline,workdif,experience);
+			request.getSession().setAttribute("pteval", parteval);
 			request.getSession().setAttribute("successMsg", "등록 완료");
-			WorkmanService.addPTEval(proscons, wage, environment, incline, workdif, experience);
-			// 개선필요
 			log.info("평가글 등록 성공");
 			url = "textWriteSuccess.jsp";
 

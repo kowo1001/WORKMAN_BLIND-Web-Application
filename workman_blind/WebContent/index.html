@@ -9,36 +9,42 @@
 <link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-
+	
 </head>
 <body style="background-color:#000000">
-<div id="header-wrapper">
+
+	<div class="memberbox" id="header-wrapper">
+			<img src="images/worklogo.PNG" width="200" height="100" style="display: inline-block" align="left">
+			<a style="display: inline-block" href='login.html' style="text-align:right">로그인</a>
+			<!-- 	<h4 style="display: inline-block" style="text-align:right">회원가입</h4> -->
+	      &nbsp;&nbsp;&nbsp;<a href = "write.html" style="text-align:right">회원가입</a>
+	      &nbsp;&nbsp;&nbsp;<a href = "write.html" style="text-align:right">기업가입</a><br><br>
+			
+	</div>
+
 	<div id="header" class="container">
 		<div id="logo">
-		<img src="images/worklogo.PNG" width="200" height="100" style="display: inline-block" align="left">
-					<!-- <h4 style="display: inline-block" style="text-align:right">로그인</h4> -->
-      <a style="display: inline-block" href='login.html' style="text-align:right">로그인</a>
-		<!-- 	<h4 style="display: inline-block" style="text-align:right">회원가입</h4> -->
-      <a href = "write.html" style="text-align:right">회원가입</a><br><br>
 		<center><h1><a href="#" >WORKMAN BLIND</a></h1></center>
+		
+					<!-- <h4 style="display: inline-block" style="text-align:right">로그인</h4> -->
 
+	</div>
+	
 
-
-      
-      
-									
-			
 		</div>
 		<div id="menu">
 			<ul><center>
-				<li><a href="partTimeListView.jsp" accesskey="1" title="parttimestory" >알바스토리</a></li>
+				<li><a href="partTimeListView2.jsp" accesskey="1" title="parttimestory" >알바스토리</a></li>
 				<li><a href="#" accesskey="2" title="" >기업스토리</a></li>
-				<li><a href="#" accesskey="3" title="" >알바리뷰</a></li>
-				<li><a href="#" accesskey="4" title="" >이력서등록/관리</a></li>
+				<li><a href="workman?command=PtListAll" accesskey="3" title="" >알바리뷰</a></li>
+				<li><a href="#" accesskey="4" title="" >이력서등록/관리</a></li> 
 				<li><a href="#" accesskey="5" title="" >지원관리</a></li>
 				
-				
-				
+				<!-- onclick="location.href='${pageContext.request.contextPath}/probono?command=activistUpdateReq'" -->
+				<!-- http://localhost:8081/workman_blind/'$%7BpageContext.request.contextPath%7D/workman?command=PTListAll%27 -->
+				<!-- <a href="probono?command=activistAll"> -->
+				<!-- http://localhost:8081/workman_blind/workman?command=PTListAll -->
+				<!-- <input type="hidden" name="command" value="activist">-->
 			</ul></center>
 		</div>
 	</div>

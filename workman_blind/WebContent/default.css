@@ -1,63 +1,73 @@
 @charset "utf-8";
-	html, body
-	{
-		height: 100%;
-	}
+html, body
+{
+	height: 100%;
+}
 	
-	body
-	{
-		margin: 0px;
-		padding: 0px;
-		background: #64ABD1;
-		font-family: 'Questrial', sans-serif;
-		font-size: 12pt;
-		color: rgba(0,0,0,.6);
-	}
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background: #64ABD1;
+	font-family: 'Questrial', sans-serif;
+	font-size: 12pt;
+	color: rgba(0,0,0,.6);
+}
+.memberbox {
+	text-align: right;
 	
+}
+
+a
+{
+	color: white;
+	font-size: larger;
+}
+
+.memberbox a {
+	color: white;
+}
 	
-	h1, h2, h3
-	{
-		margin: 0;
-		padding: 0;
-		color: #404040;
-	}
+h1, h2, h3
+{
+	margin: 0;
+	padding: 0;
+	color: #404040;
+}
 	
-	p, ol, ul
-	{
-		margin-top: 0;
-	}
+p, ol, ul
+{
+	margin-top: 0;
+}
 	
-	ol, ul
-	{
-		padding: 0;
-		list-style: none;
-	}
+ol, ul
+{
+	padding: 0;
+	list-style: none;
+}
+
+p
+{
+	line-height: 180%;
+}
 	
-	p
-	{
-		line-height: 180%;
-	}
-	
-	strong
-	{
-	}
-	
-	a
-	{
-		color: #CC3399;
-	}
-	
-	a:hover
-	{
-		text-decoration: none;
-	}
+strong
+{
+}
 	
 
-	.container
-	{
-		margin: 0px auto;
-		width: 1200px;
-	}
+	
+a:hover
+{
+	text-decoration: none;
+}
+	
+
+.container
+{
+	margin: 0px auto;
+	width: 1200px;
+}
 	
 
 /*********************************************************************************/
@@ -311,6 +321,7 @@
 	{
 		overflow: hidden;
 		background: #000000 url(images/overlay.png) repeat;
+		text-align: right;
 	}
 
 	#header
@@ -363,6 +374,7 @@
 	#menu
 	{
 		height: 60px;
+		text-align: center;
 	}
 	
 	#menu ul
@@ -393,7 +405,7 @@
 	#menu li:hover a, #menu li.active a, #menu li.active span
 	{
 		background: #FFF;
-		color: #CC3399;
+		color: white;
 	}
 	
 	#menu .current_page_item a
