@@ -114,9 +114,8 @@
 
 ### Structure
 
-<div>
-    <img width="800" src="/read/image/?mailSN=10689&attachIndex=2&contentType=image/png&offset=1383&size=243896&maxSize=200&mimeSN=1609182268.742215.29085.55040&u=janghee234">
-</div>
+![erd](https://user-images.githubusercontent.com/37354978/103251259-6b217980-49bb-11eb-8ab7-b5411f924ae9.png)
+
 
 ---
 
