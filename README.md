@@ -16,30 +16,55 @@
 
 ---
 
-### :star:WORKMAN_BLIND의 탄생과정:star:
+### :star: WORKMAN_BLIND의 탄생과정
 
 안녕하세요:smile: 
+<br><br>
 
 다들 돈을 모으기 위해 야심차게 새로운 아르바이트를 구해 출근했다가 
 
 일주일도 안되어, 3일도 안되어, 혹은 반나절만에 탈주한 경험이 있으실겁니다. (저만 그런건 아니겠지요..?:joy:)
+<br><br>
 
-이유는 다양하겠죠! 일이 너무 힘들어서:weary:, 동료 혹은 사장님이 최악이라:scream:, 진상손님이 많아서:rage:..
 
-이럴때 '거기 알바자리 최악이래!:grimacing:' 하고 미리 친구가 알려주었더라면 우리의 소중한 시간과:clock4: 노동력을:muscle: 세이-브 할수 있었을텐데 말이에요..
+이유는 다양하겠죠! 
 
-저희 **WORKMAN_BLIND**는 바로 이런 서러운 알바몬들의 고충을 해결하기위해 탄생하였답니다!
+일이 너무 힘들어서:weary:
 
-아르바이트를 지원하기전에 미리 그 곳에서 근무해봤던 선배들의 후기를 **WORKMAN_BLIND**에서 빠르게 스캔한다음!:eyes:
+동료 혹은 사장님이 최악이라:scream:
+
+진상손님이 많아서:rage:
+<br><br>
+
+
+
+이럴때 '거기 알바자리 최악이래!:grimacing:' 하고 미리 친구가 알려주었더라면 
+
+우리의 소중한 시간과:clock4: 노동력을:muscle: 세이-브 할수 있었을텐데 말이에요..
+<br><br>
+
+
+
+저희 :fire:**WORKMAN_BLIND**:fire:는 바로 이런 서러운 알바몬들의 고충을 해결하기위해 탄생하였답니다!
+
+
+아르바이트를 지원하기전에 미리 그 곳에서 근무해봤던 선배들의 후기를 **WORKMAN_BLIND**에서 빠르게 스캔한다음!:eyes::eyes::eyes:
+<br><br>
+
 
 거를곳은 거르고!:no_good: 꿀알바는 누구보다 빠르게 지원하고!:ok_woman:
+<br><br>
 
-우리의 신중한 초이스를 도와주는 멋진 친구:two_women_holding_hands:가 되어드리겠습니다. 맡겨만 주세요!!:punch::punch::punch:
 
+우리의 신중한 초이스를 도와주는 멋진 친구:two_women_holding_hands:가 되어드리겠습니다. 
+<br><br>
+
+맡겨만 주세요!!:punch::punch::punch:
+<br><br>
 
 ---
 
-## Service 
+## :sunny: Service 
 
 ---
 
@@ -118,15 +143,20 @@
 
 ---
 
-## WORKMAN_BLIND 기능 설명
+### :thumbsup: 구현 과정 - 깃허브 프로젝트 기능 이용
+
+![todo](https://user-images.githubusercontent.com/73862504/103252477-74611500-49c0-11eb-9bda-f586027cfe8e.PNG)
+
+---
+
+## :speech_balloon: WORKMAN_BLIND 기능 설명
 
 ---
 
 ### Structure
 
-<div>
-    <img width="800" src="/read/image/?mailSN=10689&attachIndex=2&contentType=image/png&offset=1383&size=243896&maxSize=200&mimeSN=1609182268.742215.29085.55040&u=janghee234">
-</div>
+![erd](https://user-images.githubusercontent.com/73862504/103251857-ff8cdb80-49bd-11eb-99ca-70a725b0e7a8.png)
+
 
 ---
 
@@ -223,7 +253,69 @@ commit;
 
 ---
 
-## ISSUE
-<div> 
+## :fire: ISSUE
 
+---
+
+#### 1. 일부 팀원에게만 나타나는 404오류
+
+---
+
+깃허브 데스크탑을 이용해 푸쉬한 같은 파일임에도 불구하고 일부 팀원에게만 404에러가 발생했다.
+
+문제의 원인을 찾아보니 각자 탐캣의 경로가 미세하게 달랐던 탓이었고
+
+C:\ITStudy\00.sw\04.WAS\apache-tomcat-8.5.61\lib
+
+다음과 같은 경로로 모두 통일하고
+
+ jsp-api.jar과 servlet-api.jar 의 경로 또한 통일함으로써 해결할 수 있었다. 
+
+---
+
+#### 2. @WebSevlet(/)과 httprequest에 엑박이 뜸
+
+---
+
+jsp-api.jar, servlet-api.jar를 추가헤 해결하였다.
+
+---
+
+#### 3. CSS파일 로드가 되지않음
+
+---
+
+이클립스 상의 탭이 아닌 크롬으로 창을 띄우니 해결되었다.
+
+탭으로 띄울 경우, 업데이트가 반영되지 않거나 느리게 되는 경우가 많기 때문에
+
+꼭 Window - Web browser - Chrome로 설정해 크롬으로 띄우는 것이 안전하다.
+
+
+그 외에 css 파일 경로 출력해보기, URL 에 직접 css 파일 경로를 넣어보는 방법으로
+
+CSS파일에 오류가 있어서 로드가 안되는건 아닌지 확인해보는 방법이 있다.
+
+---
+
+#### 4. VARCHAR2 vs CLOB 사용 여부
+
+---
+게시판 작성 기능을 두고 varchar2보다 더 큰 데이터 타입을 찾았고, 최대 4GB까지 작성가능한 CLOB이라는 걸 알게되었다.
+
+하지만, 시스템상에서 문제가 생길 수 있다는 강사님의 조언에 따라 varchar2를 최대 크기인 4000바이트로 설정했다. -> varchar2(4000)
+
+---
+
+#### 5. JSP 파일 생성 직후 에러
+
+---
+- The superclass "javax.servlet.http.HttpServlet" was not found on the Java Build Path
+
+
+이클립스에 tomcat8.5가 연동이 안되어서 생긴 문제
+
+tomcat 8.5 서버를 이클립스에 연동해서 해결함
+
+---
 
