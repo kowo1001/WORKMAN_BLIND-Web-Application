@@ -8,11 +8,11 @@
 
 > **팀원 : 장종욱, 권희성, 장문희**
 >> 
-:mag: [(엑셀문서링크)](https://docs.google.com/spreadsheets/d/19So7A99qJnlKGLl4MukpBJ5gDMmvVqs-dZwoCNEFR7c/edit#gid=0)
+:mag: [엑셀문서링크](https://docs.google.com/spreadsheets/d/19So7A99qJnlKGLl4MukpBJ5gDMmvVqs-dZwoCNEFR7c/edit#gid=0)
 
-:mag: [(ERDCLOUD 링크 )](https://www.erdcloud.com/d/4FcQJ7HKsogLmDyL9)
+:mag: [ERDCLOUD 링크 ](https://www.erdcloud.com/d/4FcQJ7HKsogLmDyL9)
 
-:mag: [(카카오 오븐 페이지 설계 )](https://ovenapp.io/project/VAWmAEwLwYoCOj8CLJ8i0hJKVkupt41v#f5ld6)
+:mag: [카카오 오븐 페이지 설계](https://ovenapp.io/project/VAWmAEwLwYoCOj8CLJ8i0hJKVkupt41v#f5ld6)
 
 
 ---
@@ -317,4 +317,12 @@ CSS파일에 오류가 있어서 로드가 안되는건 아닌지 확인해보�
 tomcat 8.5 서버를 이클립스에 연동해서 해결함
 
 ---
+
+## ✍️ Author
+ Team WORKMAN_BLIND
+  - 권희성 [(HeeSeongKwon )](https://github.com/shiningcastle)
+  - 장문희 [(MoonheeJang)](https://github.com/JANGMOONHEE)
+  - 장종욱 [(JongwookJang)](https://github.com/kowo1001)
+ 
+
 
