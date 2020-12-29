@@ -12,7 +12,7 @@ import workman.model.dto.ParttimeEval;
 import workman.model.dto.ParttimeList;
 
 public class WorkmanService {
-	
+
 	private static WorkmanService instance = new WorkmanService();
 	private WorkmanService() {};
 	public static WorkmanService getInstance() {
@@ -189,12 +189,6 @@ public class WorkmanService {
 	}
 
 	// parttimeeval
-
-	public static boolean addPTEval(String proscons, long wage, String environment, String incline,
-			String workdif, String experience) throws MessageException, SQLException {
-
-		return ParttimeEvalDAO.addPTEval(proscons, wage, environment, incline, workdif, experience);
-	}
 
 	public static boolean updatePTEvalProCon(Long texteval, String proscons) throws MessageException, SQLException {
 
