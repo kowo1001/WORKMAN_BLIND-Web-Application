@@ -17,50 +17,47 @@
 ---
 
 ### :star: WORKMAN_BLIND의 탄생과정
-
-안녕하세요:smile: 
-<br><br>
+<br><br><br><br>
+안녕하세요 알바몬 여러분:smile: 
+<br><br><br><br>
 
 다들 돈을 모으기 위해 야심차게 새로운 아르바이트를 구해 출근했다가 
 
 일주일도 안되어, 3일도 안되어, 혹은 반나절만에 탈주한 경험이 있으실겁니다. (저만 그런건 아니겠지요..?:joy:)
-<br><br>
+<br><br><br><br>
 
 
-이유는 다양하겠죠! 
+이유는 다양! 
 
 일이 너무 힘들어서:weary:
 
 동료 혹은 사장님이 최악이라:scream:
 
 진상손님이 많아서:rage:
-<br><br>
+<br><br><br><br>
 
 
 
 이럴때 '거기 알바자리 최악이래!:grimacing:' 하고 미리 친구가 알려주었더라면 
 
 우리의 소중한 시간과:clock4: 노동력을:muscle: 세이-브 할수 있었을텐데 말이에요..
-<br><br>
+<br><br><br><br>
 
 
 
 저희 :fire:**WORKMAN_BLIND**:fire:는 바로 이런 서러운 알바몬들의 고충을 해결하기위해 탄생하였답니다!
+<br><br><br><br>
 
 
 아르바이트를 지원하기전에 미리 그 곳에서 근무해봤던 선배들의 후기를 **WORKMAN_BLIND**에서 빠르게 스캔한다음!:eyes::eyes::eyes:
-<br><br>
-
 
 거를곳은 거르고!:no_good: 꿀알바는 누구보다 빠르게 지원하고!:ok_woman:
-<br><br>
-
 
 우리의 신중한 초이스를 도와주는 멋진 친구:two_women_holding_hands:가 되어드리겠습니다. 
-<br><br>
+<br><br><br><br>
 
 맡겨만 주세요!!:punch::punch::punch:
-<br><br>
+<br><br><br><br>
 
 ---
 
@@ -99,6 +96,7 @@
 3. 알바리스트 페이지로 넘어간다
 
 4. (1-알바리스트페이지 ->알바평가게시판페이지) 지역 검색 -> 지역에 속한 기업 리스트 출력(알바리스트페이지) -> 기업명 클릭시 해당 기업 평가게시판으로 이동
+
    (2-알바리스트페이지 ->알바평가게시판페이지) 기업명 클릭 -> 기업에 해당하는 알바평가게시판으로 이동
 
 ---
@@ -183,40 +181,40 @@ CREATE TABLE member (
        user_pw                 VARCHAR2(50) NOT NULL,
        user_name               VARCHAR2(50) NOT NULL,
        user_email              VARCHAR2(50) NOT NULL,
-       company_name			   VARCHAR2(50)
+       company_name	       VARCHAR2(50)
 );
 
 
 CREATE TABLE parttimelist (
        text_list                NUMBER(10) PRIMARY KEY,
        company_name             VARCHAR2(50) NOT NULL,
-       user_id			        VARCHAR2(50) NOT NULL,
-       review_num   		    NUMBER(10) NOT NULL,
+       user_id		  	VARCHAR2(50) NOT NULL,
+       review_num   		NUMBER(10) NOT NULL,
        review_score             NUMBER(10) NOT NULL,
        recruit_status           VARCHAR2(50) NOT NULL,
-       regist_date   		    VARCHAR2(50) NOT NULL,
-       emp_period   		    VARCHAR2(50) NOT NULL
+       regist_date   		VARCHAR2(50) NOT NULL,
+       emp_period   		VARCHAR2(50) NOT NULL
 );
 
 
 CREATE TABLE parttimeeval (
-	   text_eval                NUMBER(10) PRIMARY KEY,
+	   text_eval            NUMBER(10) PRIMARY KEY,
        text_list                NUMBER(10) NOT NULL,
        user_id      	     	VARCHAR2(50) NOT NULL,
-       company_name		    	VARCHAR2(50) NOT NULL,
+       company_name		VARCHAR2(50) NOT NULL,
        pros_cons     	    	VARCHAR2(50) NOT NULL,
-       wage   		            Number(10) NOT NULL,
+       wage   		        Number(10) NOT NULL,
        environment              VARCHAR2(50) NOT NULL,
-       incline          		VARCHAR2(50) NOT NULL,
-       work_dif   		     	VARCHAR2(50) NOT NULL,
+       incline          	VARCHAR2(50) NOT NULL,
+       work_dif   		VARCHAR2(50) NOT NULL,
        experience   	    	VARCHAR2(4000) NOT NULL
 );
 
 CREATE TABLE company (
 	company_name	    	VARCHAR2(50)	PRIMARY KEY,
 	company_story	    	VARCHAR2(4000)	NOT NULL,
-	company_loc		    	VARCHAR2(100)	NOT NULL,
-	company_num		      	VARCHAR2(50)	NOT NULL
+	company_loc		VARCHAR2(100)	NOT NULL,
+	company_num		VARCHAR2(50)	NOT NULL
 );
 
 
