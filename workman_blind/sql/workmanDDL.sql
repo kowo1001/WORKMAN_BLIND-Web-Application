@@ -1,13 +1,13 @@
--- È¸¿ø
+-- È¸ï¿½ï¿½
 DROP TABLE member cascade constraint;
 
--- ¾Ë¹Ù ¸®½ºÆ®
+-- ï¿½Ë¹ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®
 DROP TABLE parttimelist cascade constraint;
 
--- ¾Ë¹Ù Æò°¡ °Ô½ÃÆÇ
+-- ï¿½Ë¹ï¿½ ï¿½ï¿½ ï¿½Ô½ï¿½ï¿½ï¿½
 DROP TABLE parttimeeval cascade constraint;
 
--- ±â¾÷
+-- ï¿½ï¿½ï¿½
 DROP TABLE company cascade constraint;
 
 

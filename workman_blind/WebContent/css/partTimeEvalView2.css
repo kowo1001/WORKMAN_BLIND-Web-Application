@@ -182,7 +182,7 @@ form {
 
 
 .listTop {
-   position: absolute;
+	position: absolute;
     top: -32px;
 }
 
@@ -525,11 +525,26 @@ tr {
 }
 
 
-    
-    
-.writebox {
-	text-align: right;
-    padding-top: 18px;
-}
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

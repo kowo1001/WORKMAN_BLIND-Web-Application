@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-import workman.exception.NotExistException;
 import workman.model.dto.Member;
 import workman.model.util.PublicCommon;
 
@@ -160,6 +159,8 @@ public class MemberDAO {
 	public static Member getMember(String userid) throws SQLException {
 		
 		EntityManager em = PublicCommon.getEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
 
 		Member member = null;
 		
@@ -178,35 +179,6 @@ public class MemberDAO {
 		}
 		return member;
 	}
-	
-	public static Member LoginMember(String userid, String userpw) throws SQLException, NotExistException {
-	      
-	      EntityManager em = PublicCommon.getEntityManager();
-	      EntityTransaction tx = em.getTransaction();
-	      tx.begin();
-
-	      Member member = null;
-	      
-	      try {
-	         
-	         Member member2 = em.find(Member.class, userid);
-	         
-	         if(member2.getUserpw() == userpw) {
-	            return member2;
-	         } 
-	         
-	      } catch (Exception e) {
-	         
-	         throw new NotExistException();
-	         
-	      } finally {
-	         
-	         em.close();
-	         
-	      }
-	      return member;
-	   }
-	
 
 	public static ArrayList<Member> getAllMember() throws SQLException {
 
