@@ -38,7 +38,7 @@ public class Parttimelist {
 	
 	@OneToMany
 	@JoinColumn(name="user_id")
-	private Member userid;
+	private List<Member> userid;
 
 	@ManyToOne
 	@JoinColumn(name="company_name")
@@ -59,8 +59,6 @@ public class Parttimelist {
 	@Column(name="emp_period")
 	private String empperiod;
 	
-	@OneToMany(mappedBy="textlist")
-	private List<Parttimeeval> parttimeevals; 
 
 }
 

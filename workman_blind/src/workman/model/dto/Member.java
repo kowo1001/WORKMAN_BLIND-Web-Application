@@ -42,10 +42,5 @@ public class Member {
 	@Column(name = "user_email")
 	private String user_email;
 	
-	@OneToMany(mappedBy = "userid")
-	private List<Parttimeeval> parttimeeval;
-	
-	@OneToMany(mappedBy = "userid")
-	private List<Parttimelist> parttimelists;
 	
 }
