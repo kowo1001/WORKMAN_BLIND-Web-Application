@@ -29,76 +29,76 @@ public class WorkmanFrontController extends HttpServlet {
 		if (command != null) {
 			
 			if (command.equals("CompanyAll")) {
-				CompanyAll(request, response);
+				companyAll(request, response);
 
 			} else if (command.equals("Company")) {
-				Company(request, response);
+				company(request, response);
 
 			} else if (command.equals("CompanyInsert")) {
-				CompanyInsert(request, response);
+				companyInsert(request, response);
 
 			} else if (command.equals("CompanyUpdateReq")) {
-				CompanyUpdateReq(request, response);
+				companyUpdateReq(request, response);
 
 			} else if (command.equals("CompanyUpdateNum")) {
-				CompanyUpdateNum(request, response);
+				companyUpdateNum(request, response);
 
 			} else if (command.equals("CompanyDelete")) {
-				CompanyDelete(request, response);
+				companyDelete(request, response);
 
 			} else if (command.equals("MemberAll")) {
-				MemberAll(request, response);
+				memberAll(request, response);
 
 			} else if (command.equals("Member")) {
-				Member(request, response);
+				member(request, response);
 
 			} else if (command.equals("MemberInsert")) {
-				MemberInsert(request, response);
+				memberInsert(request, response);
 
 			} else if (command.equals("MemberUpdateReq")) {
-				MemberUpdateReq(request, response);
+				memberUpdateReq(request, response);
 
 			} else if (command.equals("MemberUpdatePw")) {
-				MemberUpdatePw(request, response);
+				memberUpdatePw(request, response);
 
 			} else if (command.equals("MemberDelete")) {
-				MemberDelete(request, response);
+				memberDelete(request, response);
 
 			} else if (command.equals("PtListAll")) {
-				PTListAll(request, response);
+				ptListAll(request, response);
 
 			} else if (command.equals("PtList")) {
-				PTList(request, response);
+				ptList(request, response);
 
 			} else if (command.equals("PtListInsert")) {
-				PTListInsert(request, response);
+				ptListInsert(request, response);
 
 			} else if (command.equals("PtListUpdateReq")) {
-				PTListUpdateReq(request, response);
+				ptListUpdateReq(request, response);
 
 			} else if (command.equals("PtListUpdateRecruitstat")) {
-				PTListUpdateRecruitstat(request, response);
+				ptListUpdateRecruitstat(request, response);
 
 			} else if (command.equals("PtListDelete")) {
-				PTListDelete(request, response);
+				ptListDelete(request, response);
 
 			} else if (command.equals("PtEvalAll")) {
-				PTEvalAll(request, response);
+				ptEvalAll(request, response);
 
 			} else if (command.equals("PtEval")) {
-				PTEval(request, response);
+				ptEval(request, response);
 
 			} else if (command.equals("PtEvalInsert")) {
-				PTEvalInsert(request, response);
+				ptEvalInsert(request, response);
 
 			} else if (command.equals("PtEvalUpdateReq")) {
-				PTEvalUpdateReq(request, response);
+				ptEvalUpdateReq(request, response);
 
 			} else if (command.equals("PtEvalUpdateExperience")) {
-				PTEvalUpdateExperience(request, response);
+				ptEvalUpdateExperience(request, response);
 
 			} else if (command.equals("PtEvalDelete")) {
-				PTEvalDelete(request, response);
+				ptEvalDelete(request, response);
 
 			}
 
@@ -107,7 +107,7 @@ public class WorkmanFrontController extends HttpServlet {
 		}
 	}
 
-	public void CompanyAll(HttpServletRequest request, HttpServletResponse response)
+	public void companyAll(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -126,7 +126,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void Company(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void company(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String url = "showError.jsp";
 
@@ -144,7 +144,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	protected void CompanyInsert(HttpServletRequest request, HttpServletResponse response)
+	protected void companyInsert(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -175,7 +175,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void CompanyUpdateReq(HttpServletRequest request, HttpServletResponse response)
+	public void companyUpdateReq(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -192,7 +192,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void CompanyUpdateNum(HttpServletRequest request, HttpServletResponse response)
+	public void companyUpdateNum(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -212,7 +212,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void CompanyDelete(HttpServletRequest request, HttpServletResponse response)
+	public void companyDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -235,7 +235,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void MemberAll(HttpServletRequest request, HttpServletResponse response)
+	public void memberAll(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -254,7 +254,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void Member(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void member(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String url = "showError.jsp";
 
@@ -271,7 +271,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	protected void MemberInsert(HttpServletRequest request, HttpServletResponse response)
+	protected void memberInsert(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -302,7 +302,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void MemberUpdateReq(HttpServletRequest request, HttpServletResponse response)
+	public void memberUpdateReq(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -318,7 +318,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void MemberUpdatePw(HttpServletRequest request, HttpServletResponse response)
+	public void memberUpdatePw(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -338,7 +338,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void MemberDelete(HttpServletRequest request, HttpServletResponse response)
+	public void memberDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -361,7 +361,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTListAll(HttpServletRequest request, HttpServletResponse response)
+	public void ptListAll(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 	
 		System.out.println("---------------------");
@@ -387,7 +387,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void ptList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String url = "showError.jsp";
 
@@ -405,7 +405,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	protected void PTListInsert(HttpServletRequest request, HttpServletResponse response)
+	protected void ptListInsert(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -431,7 +431,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTListUpdateReq(HttpServletRequest request, HttpServletResponse response)
+	public void ptListUpdateReq(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -448,7 +448,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTListUpdateRecruitstat(HttpServletRequest request, HttpServletResponse response)
+	public void ptListUpdateRecruitstat(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -468,7 +468,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTListDelete(HttpServletRequest request, HttpServletResponse response)
+	public void ptListDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -491,7 +491,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTEvalAll(HttpServletRequest request, HttpServletResponse response)
+	public void ptEvalAll(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -510,7 +510,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTEval(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void ptEval(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String url = "showError.jsp";
 
@@ -528,7 +528,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	protected void PTEvalInsert(HttpServletRequest request, HttpServletResponse response)
+	protected void ptEvalInsert(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -559,7 +559,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTEvalUpdateReq(HttpServletRequest request, HttpServletResponse response)
+	public void ptEvalUpdateReq(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -577,7 +577,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTEvalUpdateExperience(HttpServletRequest request, HttpServletResponse response)
+	public void ptEvalUpdateExperience(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";
@@ -597,7 +597,7 @@ public class WorkmanFrontController extends HttpServlet {
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
-	public void PTEvalDelete(HttpServletRequest request, HttpServletResponse response)
+	public void ptEvalDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String url = "showError.jsp";

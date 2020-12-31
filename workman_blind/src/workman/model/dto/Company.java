@@ -43,7 +43,7 @@ public class Company {
 	private List<ParttimeList> parttimelists;
 	
 	@OneToMany(mappedBy = "companyname")
-	private List<Parttimeeval> parttimeevals;
+	private List<ParttimeEval> parttimeevals;
 
 	
 }
