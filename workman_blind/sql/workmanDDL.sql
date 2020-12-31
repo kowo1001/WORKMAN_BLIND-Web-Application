@@ -1,13 +1,13 @@
--- ȸ��
+-- 회원
 DROP TABLE member cascade constraint;
 
--- �˹� ����Ʈ
+-- 알바 리스트
 DROP TABLE parttimelist cascade constraint;
 
--- �˹� �� �Խ���
+-- 알바 평가 게시판
 DROP TABLE parttimeeval cascade constraint;
 
--- ���
+-- 기업
 DROP TABLE company cascade constraint;
 
 
